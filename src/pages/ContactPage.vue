@@ -4,6 +4,9 @@ import { useHead } from '@unhead/vue'
 import SectionLabel from '@/components/ui/SectionLabel.vue'
 import { site } from '@/data/site'
 
+import kitchenWebp from '@/assets/photos/buitenkeuken-veranda-640.webp'
+import kitchenJpg from '@/assets/photos/buitenkeuken-veranda-640.jpg'
+
 useHead({
   title: 'Contact & offerte · Houten buitenverblijven op maat',
   meta: [
@@ -125,6 +128,17 @@ async function submit() {
           <strong>Tip:</strong> foto's van de plek in je tuin (en eventueel een schets of
           voorbeelden) helpen enorm bij een eerste inschatting — stuur ze gerust mee per e-mail.
         </p>
+        <picture class="hidden lg:block">
+          <source type="image/webp" :srcset="kitchenWebp" />
+          <img
+            :src="kitchenJpg"
+            width="640"
+            height="480"
+            alt="Maatwerk buitenkeuken met kamado-barbecue onder een houten veranda met windscherm"
+            loading="lazy"
+            class="aspect-[4/3] w-full rounded-[4px] border border-line-200 object-cover"
+          />
+        </picture>
       </div>
 
       <!-- Formulier -->

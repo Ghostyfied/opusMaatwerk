@@ -2,7 +2,6 @@
 import { useHead } from '@unhead/vue'
 import CtaBanner from '@/components/blocks/CtaBanner.vue'
 import SectionLabel from '@/components/ui/SectionLabel.vue'
-import ServiceIcon from '@/components/ui/ServiceIcon.vue'
 import { services } from '@/data/services'
 import { site } from '@/data/site'
 import { steps } from '@/data/steps'
@@ -15,6 +14,9 @@ import hero1438 from '@/assets/photos/garden-room-1438.webp'
 import heroJpg from '@/assets/photos/garden-room-960.jpg'
 import detailWebp from '@/assets/photos/garden-room-detail-574.webp'
 import detailJpg from '@/assets/photos/garden-room-detail-574.jpg'
+import bouwWebp from '@/assets/photos/constructie-800.webp'
+import bouwWebp2x from '@/assets/photos/constructie-1400.webp'
+import bouwJpg from '@/assets/photos/constructie-800.jpg'
 
 useHead({
   title: 'Houten buitenverblijven op maat · Culemborg',
@@ -118,11 +120,27 @@ const specs = ['Douglas hout', 'Glazen schuifwanden', 'Pannendak', 'Zinken goten
           <article
             v-for="service in services"
             :key="service.title"
-            class="rounded-[4px] border border-line-200 bg-card p-6"
+            class="overflow-hidden rounded-[4px] border border-line-200 bg-card"
           >
-            <ServiceIcon :icon="service.icon" class="text-spruce-700" />
-            <h3 class="mt-4 font-semibold text-ink-900">{{ service.title }}</h3>
-            <p class="mt-2 text-sm leading-relaxed">{{ service.description }}</p>
+            <picture>
+              <source
+                type="image/webp"
+                :srcset="`${service.image.webp} 640w, ${service.image.webp2x} 960w`"
+                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+              />
+              <img
+                :src="service.image.jpg"
+                width="640"
+                height="480"
+                :alt="service.image.alt"
+                loading="lazy"
+                class="aspect-[4/3] w-full object-cover"
+              />
+            </picture>
+            <div class="p-6">
+              <h3 class="font-semibold text-ink-900">{{ service.title }}</h3>
+              <p class="mt-2 text-sm leading-relaxed">{{ service.description }}</p>
+            </div>
           </article>
         </div>
       </div>
@@ -199,6 +217,27 @@ const specs = ['Douglas hout', 'Glazen schuifwanden', 'Pannendak', 'Zinken goten
         Heldere afspraken vooraf: de eerste inschatting is altijd gratis, en desgewenst werk ik met
         een vaste totaalprijs voor het hele project.
       </p>
+      <figure class="mt-12">
+        <picture>
+          <source
+            type="image/webp"
+            :srcset="`${bouwWebp} 800w, ${bouwWebp2x} 1400w`"
+            sizes="(min-width: 1152px) 1088px, 100vw"
+          />
+          <img
+            :src="bouwJpg"
+            width="1400"
+            height="1050"
+            alt="Constructie in douglas hout van een buitenverblijf in aanbouw, met asymmetrische kap en schoren"
+            loading="lazy"
+            class="aspect-[21/9] w-full rounded-[4px] object-cover object-[center_62%]"
+          />
+        </picture>
+        <figcaption class="mt-3 text-sm text-ink-600/70">
+          In aanbouw: douglas constructie met asymmetrische kap — het balkenwerk dat straks het
+          karakter van het buitenverblijf bepaalt.
+        </figcaption>
+      </figure>
     </section>
 
     <!-- 6 · Waarom -->
