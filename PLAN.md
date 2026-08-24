@@ -21,13 +21,13 @@ A complete plan for building a new, professional, static Vue site hosted on GitH
 
 ### Branding status & placeholder strategy
 
-| Identity element | Status | Placeholder until then |
-|---|---|---|
-| Company name | ❌ TBD | `[BEDRIJFSNAAM]` in copy/meta; "Project Buitenwerk" as internal codename |
-| Logo | ❌ TBD | Neutral placeholder mark (framed monogram/wordmark component, clearly temporary) |
-| Domain | ❌ TBD | `ghostyfied.github.io/opusMaatwerk` during development |
-| E-mail | ❌ TBD | Form via Formspree (works without a domain); `tel:`/WhatsApp once number is confirmed |
-| Brand colors/type | ❌ TBD | Provisional design system (§5), built entirely as swappable tokens |
+| Identity element  | Status | Placeholder until then                                                                |
+| ----------------- | ------ | ------------------------------------------------------------------------------------- |
+| Company name      | ❌ TBD | `[BEDRIJFSNAAM]` in copy/meta; "Project Buitenwerk" as internal codename              |
+| Logo              | ❌ TBD | Neutral placeholder mark (framed monogram/wordmark component, clearly temporary)      |
+| Domain            | ❌ TBD | `ghostyfied.github.io/opusMaatwerk` during development                                |
+| E-mail            | ❌ TBD | Form via Formspree (works without a domain); `tel:`/WhatsApp once number is confirmed |
+| Brand colors/type | ❌ TBD | Provisional design system (§5), built entirely as swappable tokens                    |
 
 **Swap mechanics (build requirement):** all identity lives in exactly three places — `src/data/site.ts` (name, tagline, domain, e-mail, phone, KvK, socials → feeds copy, meta tags, JSON-LD), a `BrandMark.vue` component (placeholder mark now, real logo later), and the Tailwind `@theme` token block (colors/fonts). Rebranding = editing those three files. Nothing else in the codebase may hard-code identity.
 
@@ -35,17 +35,17 @@ A complete plan for building a new, professional, static Vue site hosted on GitH
 
 ## 2. Source material: the current opusmaatwerk.nl
 
-Platform: One.com Web Editor (site-builder). Three pages: Home, Foto's van projecten → Exterieur, Werkwijze. Meta description: *"Klusjesman Timmerman Culemborg"*. The new company's site should reuse its substance and avoid its weaknesses.
+Platform: One.com Web Editor (site-builder). Three pages: Home, Foto's van projecten → Exterieur, Werkwijze. Meta description: _"Klusjesman Timmerman Culemborg"_. The new company's site should reuse its substance and avoid its weaknesses.
 
 ### Content worth carrying over
 
-| Content | Notes |
-|---|---|
-| Intro text ("Voor een oplossing op maat ben je bij mij aan het goede adres…") | Warm, personal, includes the musician backstory. Rewrite for the new positioning; the story is Tijmen's, not the old brand's — it carries over. |
-| 5 testimonials (Hagemans/Den Bosch, Albers/Asperen, Stadsboerderij Caetshage/Culemborg, Van Dongen/Culemborg, Spijker/Culemborg) | Genuinely strong social proof about Tijmen personally (meedenken, betrouwbaarheid, duurzaamheid, prijs). Reusable under the new brand — reconfirm permission in the new context. |
-| Werkwijze: 5 process steps (oriëntatie → urenraming (gratis) → ontwerpschets (betaald) → definitief ontwerp + vaste prijs optie → planning) | Great transparency — keep and visualize as a timeline. Rates/terms may change with the new company: confirm. |
-| Voorwaarden: €55/u excl. btw, min. dagdeel + reistijd, betaling 14 dagen, 1 jaar garantie, verzekerd | Confirm whether these carry over to the new company. |
-| Photos | Re-collect originals in high-res from Tijmen; the current gallery is an unlabeled JS-rendered dump. |
+| Content                                                                                                                                     | Notes                                                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Intro text ("Voor een oplossing op maat ben je bij mij aan het goede adres…")                                                               | Warm, personal, includes the musician backstory. Rewrite for the new positioning; the story is Tijmen's, not the old brand's — it carries over.                                  |
+| 5 testimonials (Hagemans/Den Bosch, Albers/Asperen, Stadsboerderij Caetshage/Culemborg, Van Dongen/Culemborg, Spijker/Culemborg)            | Genuinely strong social proof about Tijmen personally (meedenken, betrouwbaarheid, duurzaamheid, prijs). Reusable under the new brand — reconfirm permission in the new context. |
+| Werkwijze: 5 process steps (oriëntatie → urenraming (gratis) → ontwerpschets (betaald) → definitief ontwerp + vaste prijs optie → planning) | Great transparency — keep and visualize as a timeline. Rates/terms may change with the new company: confirm.                                                                     |
+| Voorwaarden: €55/u excl. btw, min. dagdeel + reistijd, betaling 14 dagen, 1 jaar garantie, verzekerd                                        | Confirm whether these carry over to the new company.                                                                                                                             |
+| Photos                                                                                                                                      | Re-collect originals in high-res from Tijmen; the current gallery is an unlabeled JS-rendered dump.                                                                              |
 
 ### Mistakes the new site must not repeat
 
@@ -61,8 +61,8 @@ Platform: One.com Web Editor (site-builder). Three pages: Home, Foto's van proje
 
 ## 3. Positioning & messaging strategy
 
-**Primary positioning:** *Specialist in houten buitenverblijven — ontwerp én bouw door één vakman.*
-**Secondary:** *Maatwerk binnen en buiten* (built-ins, doors, renovation) — keeps the existing pipeline without diluting the headline story.
+**Primary positioning:** _Specialist in houten buitenverblijven — ontwerp én bouw door één vakman._
+**Secondary:** _Maatwerk binnen en buiten_ (built-ins, doors, renovation) — keeps the existing pipeline without diluting the headline story.
 
 **Audience:** homeowners in Culemborg / Rivierenland / province of Utrecht & Gelderland considering a serious garden building (garden room, veranda, large shed) who value craftsmanship, involvement in the design, and reliability over lowest price.
 
@@ -75,9 +75,9 @@ Platform: One.com Web Editor (site-builder). Three pages: Home, Foto's van proje
 
 **Tagline:** finalized together with the name (a good name+tagline pair is one decision, not two). Name-independent candidates that work today:
 
-- *"Houten buitenverblijven op maat"* — clear + SEO (recommended for hero H1 regardless of final tagline)
-- *"Vakwerk in hout — van schets tot oplevering"*
-- *"Buitenleven, gebouwd voor jaren"*
+- _"Houten buitenverblijven op maat"_ — clear + SEO (recommended for hero H1 regardless of final tagline)
+- _"Vakwerk in hout — van schets tot oplevering"_
+- _"Buitenleven, gebouwd voor jaren"_
 
 Tone of voice: professional but personal ("ik", not "wij"), concrete, no marketing fluff. All site copy in Dutch. Where the name would appear, copy uses `[BEDRIJFSNAAM]` so the swap is greppable.
 
@@ -101,7 +101,8 @@ Six routes + one legal page. Navigation: **Buitenverblijven · Projecten · Werk
 ### Page blueprints
 
 **Home**
-1. Hero: full-bleed photo of the flagship garden room, dark gradient overlay, H1 *"Houten buitenverblijven op maat"*, subline *"Ontwerp en bouw door één vakman uit Culemborg — van eerste schets tot laatste dakpan."*, CTAs **Bekijk projecten** / **Vraag vrijblijvend advies**.
+
+1. Hero: full-bleed photo of the flagship garden room, dark gradient overlay, H1 _"Houten buitenverblijven op maat"_, subline _"Ontwerp en bouw door één vakman uit Culemborg — van eerste schets tot laatste dakpan."_, CTAs **Bekijk projecten** / **Vraag vrijblijvend advies**.
 2. Positioning strip: one paragraph — who Tijmen is, what he builds, where.
 3. Featured projects: 3 cards → /projecten.
 4. "Wat ik maak" services grid: Buitenverblijven & tuinkamers · Overkappingen & veranda's · Tuinhuizen & schuren · Maatwerk binnenshuis (kasten, deuren, herstel).
@@ -112,6 +113,7 @@ Six routes + one legal page. Navigation: **Buitenverblijven · Projecten · Werk
 9. CTA banner + footer (contact data, KvK, service area, privacy link).
 
 **Buitenverblijven** (the money page — target for SEO & ads)
+
 - Intro on the specialization; what "op maat" actually means vs. catalog garden houses.
 - Types: tuinkamer met glazen schuifwanden · overkapping/veranda · tuinhuis met berging. Each with photo, typical dimensions, options.
 - Materials & options: houtsoorten (douglas, lariks, eiken), dakbedekking (dakpannen, EPDM), glazen schuifwanden, goten/hemelwaterafvoer, verlichting/elektra, fundering.
@@ -120,20 +122,24 @@ Six routes + one legal page. Navigation: **Buitenverblijven · Projecten · Werk
 - Process recap + CTA.
 
 **Projecten**
+
 - Filterable grid (Alles · Buitenverblijven · Overkappingen · Interieur · Renovatie). Cards: photo, title, place, year.
 - Case page per project: gallery, the story (vraag → oplossing), spec block (afmetingen, houtsoort, dak, glas, bouwtijd), linked testimonial when available, prev/next navigation, CTA.
 - Launch target: 4–6 projects, each with 4–8 photos. Grows over time — adding a project = adding one data file + photos.
 
 **Werkwijze**
+
 - The 5 steps as a vertical timeline with short explanations, marking clearly what's free and what's billed.
 - Tarieven & voorwaarden as a clean table (confirm figures for the new company).
 - Garanties & verzekering block. CTA.
 
 **Over**
+
 - Portrait, the musician → maker story told properly, values, and why the new company focuses on buitenverblijven.
 - Optionally: partners/collaboration note (testimonials mention working with colleagues for bigger jobs — reassures capacity for large builds).
 
 **Contact**
+
 - Two columns: (left) direct contact — phone/WhatsApp deep-link, e-mail, service area ("Culemborg en omstreken, ± 50 km"), response promise; (right) quote form: naam, e-mail, telefoon, type project (select), omschrijving, foto-upload prompt ("stuur foto's van de locatie via WhatsApp/e-mail").
 - Footer data everywhere: KvK, btw-id, e-mail, phone.
 
@@ -145,18 +151,18 @@ Six routes + one legal page. Navigation: **Buitenverblijven · Projecten · Werk
 
 ### Provisional color tokens
 
-| Token | Value | Use |
-|---|---|---|
-| `spruce-900` | `#22362A` | Footer, hero overlays |
-| `spruce-700` | `#35523F` | **Provisional primary:** buttons, headings accents, header |
-| `spruce-500` | `#57795F` | Hover states, links |
-| `oak-600` | `#9A6B33` | Accent (text-safe): eyebrows, highlights |
-| `oak-400` | `#C08A4E` | Accent (visual): icons, active states — from the wood photography |
-| `cream-50` | `#FAF8F2` | Page background (warm white — never clinical #FFF) |
-| `cream-100` | `#F2EDE2` | Alternating section background, cards |
-| `ink-900` | `#23211C` | Headings on light |
-| `ink-600` | `#4B473E` | Body text |
-| `line-200` | `#E4DECF` | Borders, rules |
+| Token        | Value     | Use                                                               |
+| ------------ | --------- | ----------------------------------------------------------------- |
+| `spruce-900` | `#22362A` | Footer, hero overlays                                             |
+| `spruce-700` | `#35523F` | **Provisional primary:** buttons, headings accents, header        |
+| `spruce-500` | `#57795F` | Hover states, links                                               |
+| `oak-600`    | `#9A6B33` | Accent (text-safe): eyebrows, highlights                          |
+| `oak-400`    | `#C08A4E` | Accent (visual): icons, active states — from the wood photography |
+| `cream-50`   | `#FAF8F2` | Page background (warm white — never clinical #FFF)                |
+| `cream-100`  | `#F2EDE2` | Alternating section background, cards                             |
+| `ink-900`    | `#23211C` | Headings on light                                                 |
+| `ink-600`    | `#4B473E` | Body text                                                         |
+| `line-200`   | `#E4DECF` | Borders, rules                                                    |
 
 Rationale for provisional green: it comes from the product's context (gardens) rather than from any brand guess, so it won't imprint a false identity — and if the final brand happens to land elsewhere (navy, terracotta, black), the token swap carries no layout consequences. Contrast: spruce-700 and ink-600 on cream-50 are both ≥ 7:1 — AA/AAA safe. Buttons: spruce bg + cream text (primary), oak ghost (secondary).
 
@@ -188,18 +194,18 @@ Rationale for provisional green: it comes from the product's context (gardens) r
 
 ### Stack
 
-| Concern | Choice | Why |
-|---|---|---|
-| Framework | **Vue 3 (latest) + Vite (latest)** | As requested; Composition API + `<script setup>` |
-| Static generation | **vite-ssg** (+ vue-router 4, @unhead/vue) | Pre-renders every route to real HTML at build time → proper SEO/OG on GitHub Pages, history-mode URLs without 404 hacks, stays a plain Vue+Vite project (Nuxt would work too but adds framework weight this site doesn't need) |
-| Styling | **Tailwind CSS v4** | Design tokens via `@theme` (provisional palette above), fast professional iteration, tiny purged output; **the brand-swap surface** |
-| Content | **Typed data files** (`src/data/*.ts`: projects, testimonials, services, **site.ts = single source of identity**) | No CMS needed yet; adding a project = one object + photos; type-checked; rebrand = edit site.ts + tokens + BrandMark |
-| Images | **vite-imagetools** (or a sharp prebuild script) | Generates AVIF/WebP + responsive `srcset` from originals; `loading="lazy"`; explicit width/height against CLS |
-| Contact form | **Formspree free tier** (or FormSubmit) + `tel:`/WhatsApp `wa.me` links | GitHub Pages has no backend; works without a company domain/e-mail; honeypot + Dutch validation messages |
-| SEO | @unhead/vue per-route meta fed from `site.ts`, `sitemap.xml` + `robots.txt` at build, JSON-LD (`LocalBusiness` sitewide, per-project `CreativeWork`/`ImageObject`), OG image per page | Name/domain flow in from config at build time |
-| Analytics | **GoatCounter or Plausible** (optional) | Cookieless → no cookie banner needed under AVG |
-| Lint/format | ESLint + Prettier, `vue-tsc` | |
-| CI/CD | **GitHub Actions → GitHub Pages** (official `actions/deploy-pages` flow) | Build + deploy on push to `main` |
+| Concern           | Choice                                                                                                                                                                                | Why                                                                                                                                                                                                                            |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Framework         | **Vue 3 (latest) + Vite (latest)**                                                                                                                                                    | As requested; Composition API + `<script setup>`                                                                                                                                                                               |
+| Static generation | **vite-ssg** (+ vue-router 4, @unhead/vue)                                                                                                                                            | Pre-renders every route to real HTML at build time → proper SEO/OG on GitHub Pages, history-mode URLs without 404 hacks, stays a plain Vue+Vite project (Nuxt would work too but adds framework weight this site doesn't need) |
+| Styling           | **Tailwind CSS v4**                                                                                                                                                                   | Design tokens via `@theme` (provisional palette above), fast professional iteration, tiny purged output; **the brand-swap surface**                                                                                            |
+| Content           | **Typed data files** (`src/data/*.ts`: projects, testimonials, services, **site.ts = single source of identity**)                                                                     | No CMS needed yet; adding a project = one object + photos; type-checked; rebrand = edit site.ts + tokens + BrandMark                                                                                                           |
+| Images            | **vite-imagetools** (or a sharp prebuild script)                                                                                                                                      | Generates AVIF/WebP + responsive `srcset` from originals; `loading="lazy"`; explicit width/height against CLS                                                                                                                  |
+| Contact form      | **Formspree free tier** (or FormSubmit) + `tel:`/WhatsApp `wa.me` links                                                                                                               | GitHub Pages has no backend; works without a company domain/e-mail; honeypot + Dutch validation messages                                                                                                                       |
+| SEO               | @unhead/vue per-route meta fed from `site.ts`, `sitemap.xml` + `robots.txt` at build, JSON-LD (`LocalBusiness` sitewide, per-project `CreativeWork`/`ImageObject`), OG image per page | Name/domain flow in from config at build time                                                                                                                                                                                  |
+| Analytics         | **GoatCounter or Plausible** (optional)                                                                                                                                               | Cookieless → no cookie banner needed under AVG                                                                                                                                                                                 |
+| Lint/format       | ESLint + Prettier, `vue-tsc`                                                                                                                                                          |                                                                                                                                                                                                                                |
+| CI/CD             | **GitHub Actions → GitHub Pages** (official `actions/deploy-pages` flow)                                                                                                              | Build + deploy on push to `main`                                                                                                                                                                                               |
 
 ### Repo structure
 
@@ -266,14 +272,14 @@ Until real assets arrive: build with the 3 available photos (garden room ×2) + 
 
 ## 8. Implementation phases
 
-| Phase | Deliverable | Definition of done |
-|---|---|---|
-| **0. Foundation** | Vite + Vue + vite-ssg + Tailwind scaffold, provisional tokens, `site.ts` + `BrandMark` placeholder identity, header/footer shell, deploy workflow | CI deploys a styled shell to GitHub Pages |
-| **1. Core pages** | Home + Contact with real copy, hero, USPs, testimonials, form | MVP shareable with the client |
-| **2. Portfolio** | Data model, Projecten grid + case template, 4–6 projects entered | Adding a project requires no code changes |
-| **3. Story pages** | Buitenverblijven pillar page, Werkwijze, Over, Privacy | Full sitemap live |
-| **B. Brand drop-in** *(whenever branding lands — independent of other phases)* | Real name/logo/colors/domain applied via `site.ts`, tokens, `BrandMark`, favicon, CNAME | Site carries the final identity; no placeholder strings remain (grep `[BEDRIJFSNAAM]` = 0 hits) |
-| **4. Polish & launch** | SEO pass (meta/JSON-LD/sitemap/OG), image pipeline, a11y audit, Lighthouse ≥95, `noindex` lifted, domain live | The new domain serves the site over HTTPS |
+| Phase                                                                          | Deliverable                                                                                                                                       | Definition of done                                                                              |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| **0. Foundation** ✅                                                           | Vite + Vue + vite-ssg + Tailwind scaffold, provisional tokens, `site.ts` + `BrandMark` placeholder identity, header/footer shell, deploy workflow | CI deploys a styled shell to GitHub Pages _(workflow ready; needs one-time Pages activation)_   |
+| **1. Core pages** ✅                                                           | Home + Contact with real copy, hero, USPs, testimonials, form                                                                                     | MVP shareable with the client                                                                   |
+| **2. Portfolio**                                                               | Data model, Projecten grid + case template, 4–6 projects entered                                                                                  | Adding a project requires no code changes                                                       |
+| **3. Story pages**                                                             | Buitenverblijven pillar page, Werkwijze, Over, Privacy                                                                                            | Full sitemap live                                                                               |
+| **B. Brand drop-in** _(whenever branding lands — independent of other phases)_ | Real name/logo/colors/domain applied via `site.ts`, tokens, `BrandMark`, favicon, CNAME                                                           | Site carries the final identity; no placeholder strings remain (grep `[BEDRIJFSNAAM]` = 0 hits) |
+| **4. Polish & launch**                                                         | SEO pass (meta/JSON-LD/sitemap/OG), image pipeline, a11y audit, Lighthouse ≥95, `noindex` lifted, domain live                                     | The new domain serves the site over HTTPS                                                       |
 
 Phase 0+1 first, get client feedback on look & feel, then 2–3; Phase B slots in whenever the branding is ready; Phase 4 closes it out (launch needs the domain, so B before 4).
 

@@ -1,0 +1,54 @@
+# Builds the site and deploys it to GitHub Pages.
+#
+# One-time activation (repo settings): Settings → Pages → Source: "GitHub Actions".
+# Runs automatically on pushes to main; can also be run manually on any branch
+# via the "Run workflow" button (workflow_dispatch) for a preview deploy.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm build
+        env:
+          # Project-pages URL (ghostyfied.github.io/opusMaatwerk).
+          # Change to "/" when a custom domain is attached (PLAN.md §6).
+          BASE_PATH: /opusMaatwerk/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

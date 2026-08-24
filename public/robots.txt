@@ -1,0 +1,4 @@
+# Development phase: pages carry a noindex meta tag until launch.
+# Crawling stays allowed so the noindex is actually seen.
+User-agent: *
+Disallow:
