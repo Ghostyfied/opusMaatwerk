@@ -4,7 +4,7 @@ export interface Step {
   note?: string
 }
 
-/** Werkwijze — carried over from Tijmen's huidige werkwijze-pagina. */
+/** Werkwijze — overgenomen uit de huidige werkwijze van de makers. */
 export const steps: Step[] = [
   {
     title: 'Kennismaking',
@@ -13,19 +13,19 @@ export const steps: Step[] = [
   },
   {
     title: 'Raming',
-    description: 'Een eerste inschatting van uren en kosten, zodat je weet waar je aan toe bent.',
+    description: 'Een inschatting van uren en kosten, zodat je weet waar je aan toe bent.',
     note: 'gratis',
   },
   {
     title: 'Ontwerpschets',
-    description: 'Een uitgewerkte schets van je buitenverblijf, op basis van je wensen en budget.',
+    description: 'Een schets van je buitenverblijf, op basis van je wensen en budget.',
   },
   {
     title: 'Definitief ontwerp',
-    description: 'Het definitieve ontwerp — desgewenst met een vaste totaalprijs vooraf.',
+    description: 'Het definitieve ontwerp — desgewenst met een vaste totaalprijs.',
   },
   {
     title: 'De bouw',
-    description: 'We plannen een startdatum en ik ga aan de slag. Afspraak is afspraak.',
+    description: 'We plannen een startdatum en gaan aan de slag. Afspraak is afspraak.',
   },
 ]

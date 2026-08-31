@@ -1,8 +1,8 @@
-# Project Buitenwerk — Website
+# Eigen Buiten — Website
 
-Website for a **new company** (name, logo, and domain TBD — "Project Buitenwerk" is a working title) by carpenter Tijmen Wehlburg, Culemborg NL: custom wooden garden buildings (houten buitenverblijven).
+Website for **Eigen Buiten** (logo and domain still TBD), a two-maker carpentry company in Culemborg NL: custom wooden garden buildings (buitenverblijven).
 
-**Status:** Phase 0 (foundation) and Phase 1 (Home + Contact MVP) are built. See [PLAN.md](./PLAN.md) for the full plan and remaining phases.
+**Status:** Phase 0 (foundation), Phase 1 (Home + Contact), and the first client feedback round (name drop-in, gallery page, lightbox) are built. See [PLAN.md](./PLAN.md) for the full plan and remaining phases.
 
 ## Stack
 

@@ -2,6 +2,7 @@
 import { useHead } from '@unhead/vue'
 import SiteFooter from '@/components/layout/SiteFooter.vue'
 import SiteHeader from '@/components/layout/SiteHeader.vue'
+import LightboxOverlay from '@/components/ui/LightboxOverlay.vue'
 import { site } from '@/data/site'
 
 useHead({
@@ -27,5 +28,6 @@ useHead({
       <RouterView />
     </main>
     <SiteFooter />
+    <LightboxOverlay />
   </div>
 </template>

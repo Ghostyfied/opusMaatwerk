@@ -1,14 +1,19 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue'
 import { useHead } from '@unhead/vue'
-import SectionLabel from '@/components/ui/SectionLabel.vue'
+import { openLightbox } from '@/composables/lightbox'
 import { site } from '@/data/site'
 
 import kitchenWebp from '@/assets/photos/buitenkeuken-veranda-640.webp'
 import kitchenJpg from '@/assets/photos/buitenkeuken-veranda-640.jpg'
+import kitchenLargeWebp from '@/assets/photos/buitenkeuken-veranda-1600.webp'
+import kitchenLargeJpg from '@/assets/photos/buitenkeuken-veranda-1600.jpg'
+
+const kitchenAlt =
+  'Maatwerk buitenkeuken met kamado-barbecue onder een houten veranda met windscherm'
 
 useHead({
-  title: 'Contact & offerte · Houten buitenverblijven op maat',
+  title: 'Contact & offerte · Eigen Buiten',
   meta: [
     {
       name: 'description',
@@ -76,15 +81,14 @@ async function submit() {
 <template>
   <div class="container-site py-16 sm:py-24">
     <div class="max-w-2xl">
-      <SectionLabel>Contact & offerte</SectionLabel>
       <h1
         class="font-display text-4xl font-bold tracking-tight text-balance text-ink-900 sm:text-5xl"
       >
-        Vertel me over je plannen
+        Vertel ons over je plannen
       </h1>
       <p class="mt-5 text-lg leading-relaxed">
         Een tuinkamer, overkapping of iets heel anders? Stuur je vraag met een korte omschrijving —
-        je krijgt persoonlijk antwoord van mij, meestal binnen twee werkdagen.
+        je krijgt persoonlijk antwoord van ons, meestal binnen twee werkdagen.
       </p>
     </div>
 
@@ -128,17 +132,31 @@ async function submit() {
           <strong>Tip:</strong> foto's van de plek in je tuin (en eventueel een schets of
           voorbeelden) helpen enorm bij een eerste inschatting — stuur ze gerust mee per e-mail.
         </p>
-        <picture class="hidden lg:block">
-          <source type="image/webp" :srcset="kitchenWebp" />
-          <img
-            :src="kitchenJpg"
-            width="640"
-            height="480"
-            alt="Maatwerk buitenkeuken met kamado-barbecue onder een houten veranda met windscherm"
-            loading="lazy"
-            class="aspect-[4/3] w-full rounded-[4px] border border-line-200 object-cover"
-          />
-        </picture>
+        <button
+          type="button"
+          class="hidden w-full cursor-zoom-in overflow-hidden rounded-[4px] border border-line-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-oak-400 lg:block"
+          :aria-label="`Vergroot foto: ${kitchenAlt}`"
+          @click="
+            openLightbox({
+              webp: kitchenLargeWebp,
+              jpg: kitchenLargeJpg,
+              alt: kitchenAlt,
+              caption: 'Buitenkeuken met kamado onder een veranda',
+            })
+          "
+        >
+          <picture>
+            <source type="image/webp" :srcset="kitchenWebp" />
+            <img
+              :src="kitchenJpg"
+              width="640"
+              height="480"
+              :alt="kitchenAlt"
+              loading="lazy"
+              class="aspect-[4/3] w-full object-cover transition-transform duration-300 hover:scale-[1.02]"
+            />
+          </picture>
+        </button>
       </div>
 
       <!-- Formulier -->
@@ -149,7 +167,7 @@ async function submit() {
       >
         <div v-if="status === 'sent'" class="rounded-[3px] bg-spruce-700/10 p-4 text-spruce-900">
           <p class="font-semibold">Dank voor je aanvraag!</p>
-          <p class="mt-1 text-sm">Je hoort van me, meestal binnen twee werkdagen.</p>
+          <p class="mt-1 text-sm">Je hoort van ons, meestal binnen twee werkdagen.</p>
         </div>
 
         <template v-else>

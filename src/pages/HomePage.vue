@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useHead } from '@unhead/vue'
 import CtaBanner from '@/components/blocks/CtaBanner.vue'
-import SectionLabel from '@/components/ui/SectionLabel.vue'
+import { openLightbox } from '@/composables/lightbox'
 import { services } from '@/data/services'
 import { site } from '@/data/site'
 import { steps } from '@/data/steps'
@@ -12,24 +12,22 @@ import hero640 from '@/assets/photos/garden-room-640.webp'
 import hero960 from '@/assets/photos/garden-room-960.webp'
 import hero1438 from '@/assets/photos/garden-room-1438.webp'
 import heroJpg from '@/assets/photos/garden-room-960.jpg'
-import detailWebp from '@/assets/photos/garden-room-detail-574.webp'
-import detailJpg from '@/assets/photos/garden-room-detail-574.jpg'
 import bouwWebp from '@/assets/photos/constructie-800.webp'
 import bouwWebp2x from '@/assets/photos/constructie-1400.webp'
 import bouwJpg from '@/assets/photos/constructie-800.jpg'
+import bouwLargeWebp from '@/assets/photos/constructie-1400.webp'
+import bouwLargeJpg from '@/assets/photos/constructie-1400.jpg'
 
 useHead({
-  title: 'Houten buitenverblijven op maat · Culemborg',
+  title: 'Eigen Buiten — Buitenverblijven op maat · Culemborg',
   meta: [
     {
       name: 'description',
       content:
-        'Tuinkamers, overkappingen en tuinhuizen in hout — ontworpen en gebouwd door één vakman uit Culemborg. Van de eerste schets tot de laatste dakpan.',
+        'Tuinkamers, overkappingen en tuinhuizen in hout — van ontwerp tot uitvoering, gebouwd door twee vakmannen uit Culemborg.',
     },
   ],
 })
-
-const specs = ['Douglas hout', 'Glazen schuifwanden', 'Pannendak', 'Zinken goten']
 </script>
 
 <template>
@@ -48,7 +46,7 @@ const specs = ['Douglas hout', 'Glazen schuifwanden', 'Pannendak', 'Zinken goten
           :src="heroJpg"
           width="1438"
           height="1078"
-          alt="Houten tuinkamer met glazen schuifwanden en pannendak, met timmerman Tijmen Wehlburg op de voorgrond"
+          alt="Houten tuinkamer met glazen schuifwanden en pannendak, met de twee makers van Eigen Buiten op de voorgrond"
           class="absolute inset-0 -z-20 h-full w-full object-cover"
           fetchpriority="high"
         />
@@ -66,20 +64,16 @@ const specs = ['Douglas hout', 'Glazen schuifwanden', 'Pannendak', 'Zinken goten
         "
       />
       <div class="container-site pt-44 pb-14 sm:pb-20">
-        <p class="mb-3 font-display text-xs font-semibold tracking-[0.24em] uppercase text-oak-300">
-          {{ site.location }} en omstreken · ontwerp & bouw in één hand
-        </p>
         <h1
           class="max-w-3xl font-display text-4xl font-bold tracking-tight text-balance text-white sm:text-5xl lg:text-6xl"
         >
-          Houten buitenverblijven op&nbsp;maat
+          Buitenverblijven op&nbsp;maat
         </h1>
         <p class="mt-4 max-w-xl text-lg text-cream-100/90">
-          Tuinkamers, overkappingen en tuinhuizen — ontworpen en gebouwd door één vakman, van de
-          eerste schets tot de laatste dakpan.
+          Tuinkamers, overkappingen en tuinhuizen — van ontwerp tot uitvoering.
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
-          <RouterLink to="/#uitgelicht" class="btn-on-dark">Bekijk mijn werk</RouterLink>
+          <RouterLink to="/galerij" class="btn-on-dark">Bekijk ons werk</RouterLink>
           <RouterLink to="/contact" class="btn-ghost-on-dark">Vraag vrijblijvend advies</RouterLink>
         </div>
       </div>
@@ -88,21 +82,19 @@ const specs = ['Douglas hout', 'Glazen schuifwanden', 'Pannendak', 'Zinken goten
     <!-- 2 · Positionering -->
     <section class="container-site scroll-mt-24 py-20 sm:py-28" id="intro">
       <div class="max-w-3xl">
-        <SectionLabel>Maatwerk uit {{ site.location }}</SectionLabel>
         <h2
           class="font-display text-3xl font-bold tracking-tight text-balance text-ink-900 sm:text-4xl"
         >
           Een buitenverblijf is geen bouwpakket
         </h2>
         <p class="mt-5 text-lg leading-relaxed">
-          Ik ben {{ site.owner }}, timmerman. Ik ontwerp en bouw houten buitenverblijven die kloppen
-          — bij je tuin, je huis en je budget. Geen standaardmaten uit een catalogus, maar robuust
-          vakwerk in douglas, lariks of eiken: samen bedacht, degelijk gebouwd en tot in de details
-          afgewerkt.
+          Wij ontwerpen en bouwen houten buitenverblijven die kloppen — bij je tuin, je huis en je
+          budget. Geen standaardmaten uit een catalogus, maar robuust vakwerk in douglas, lariks of
+          eiken: samen bedacht, degelijk gebouwd en tot in de details afgewerkt.
         </p>
         <p class="mt-4 leading-relaxed">
-          Grote tuinkamer of lastige hoek, strak plan of nog geen idee: ik denk met je mee en kom
-          met opties waar je zelf misschien nog niet aan had gedacht.
+          Grote tuinkamer of lastige hoek, strak plan of nog geen idee: we denken met je mee en
+          komen met opties waar je zelf misschien nog niet aan had gedacht.
         </p>
       </div>
     </section>
@@ -110,7 +102,6 @@ const specs = ['Douglas hout', 'Glazen schuifwanden', 'Pannendak', 'Zinken goten
     <!-- 3 · Diensten -->
     <section class="scroll-mt-16 bg-cream-100 py-20 sm:py-24" id="diensten">
       <div class="container-site">
-        <SectionLabel>Wat ik maak</SectionLabel>
         <h2
           class="font-display text-3xl font-bold tracking-tight text-balance text-ink-900 sm:text-4xl"
         >
@@ -122,21 +113,35 @@ const specs = ['Douglas hout', 'Glazen schuifwanden', 'Pannendak', 'Zinken goten
             :key="service.title"
             class="overflow-hidden rounded-[4px] border border-line-200 bg-card"
           >
-            <picture>
-              <source
-                type="image/webp"
-                :srcset="`${service.image.webp} 640w, ${service.image.webp2x} 960w`"
-                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-              />
-              <img
-                :src="service.image.jpg"
-                width="640"
-                height="480"
-                :alt="service.image.alt"
-                loading="lazy"
-                class="aspect-[4/3] w-full object-cover"
-              />
-            </picture>
+            <button
+              type="button"
+              class="block w-full cursor-zoom-in focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-oak-400"
+              :aria-label="`Vergroot foto: ${service.image.alt}`"
+              @click="
+                openLightbox({
+                  webp: service.image.largeWebp,
+                  jpg: service.image.largeJpg,
+                  alt: service.image.alt,
+                  caption: service.title,
+                })
+              "
+            >
+              <picture>
+                <source
+                  type="image/webp"
+                  :srcset="`${service.image.webp} 640w, ${service.image.webp2x} 960w`"
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                />
+                <img
+                  :src="service.image.jpg"
+                  width="640"
+                  height="480"
+                  :alt="service.image.alt"
+                  loading="lazy"
+                  class="aspect-[4/3] w-full object-cover transition-transform duration-300 hover:scale-[1.03]"
+                />
+              </picture>
+            </button>
             <div class="p-6">
               <h3 class="font-semibold text-ink-900">{{ service.title }}</h3>
               <p class="mt-2 text-sm leading-relaxed">{{ service.description }}</p>
@@ -146,51 +151,8 @@ const specs = ['Douglas hout', 'Glazen schuifwanden', 'Pannendak', 'Zinken goten
       </div>
     </section>
 
-    <!-- 4 · Uitgelicht project -->
-    <section class="scroll-mt-16 bg-spruce-900 py-20 text-cream-100/85 sm:py-24" id="uitgelicht">
-      <div class="container-site grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-        <picture>
-          <source type="image/webp" :srcset="detailWebp" />
-          <img
-            :src="detailJpg"
-            width="574"
-            height="980"
-            alt="Detail van de houten constructie: douglas staander met schoren en glazen schuifwand"
-            loading="lazy"
-            class="max-h-[540px] w-full rounded-[4px] object-cover object-top"
-          />
-        </picture>
-        <div>
-          <SectionLabel on-dark>Uitgelicht project</SectionLabel>
-          <h2
-            class="font-display text-3xl font-bold tracking-tight text-balance text-white sm:text-4xl"
-          >
-            Tuinkamer met glazen schuifwanden
-          </h2>
-          <p class="mt-5 leading-relaxed">
-            Een royale tuinkamer in douglas: robuust balkenwerk met karakteristieke schoren, een
-            pannendak met zinken goten en rondom glazen schuifwanden. Buiten leven, het hele jaar
-            door — gebouwd om decennia mee te gaan.
-          </p>
-          <ul class="mt-6 flex flex-wrap gap-2">
-            <li
-              v-for="spec in specs"
-              :key="spec"
-              class="rounded-[3px] border border-cream-50/25 px-3 py-1.5 text-xs font-medium tracking-wide text-cream-100"
-            >
-              {{ spec }}
-            </li>
-          </ul>
-          <p class="mt-8 text-sm text-cream-100/60">
-            Het volledige portfolio wordt momenteel gevuld — meer projecten volgen hier binnenkort.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5 · Werkwijze -->
+    <!-- 4 · Werkwijze -->
     <section class="container-site scroll-mt-16 py-20 sm:py-28" id="werkwijze">
-      <SectionLabel>Werkwijze</SectionLabel>
       <h2
         class="font-display text-3xl font-bold tracking-tight text-balance text-ink-900 sm:text-4xl"
       >
@@ -214,25 +176,39 @@ const specs = ['Douglas hout', 'Glazen schuifwanden', 'Pannendak', 'Zinken goten
         </li>
       </ol>
       <p class="mt-8 max-w-2xl text-sm">
-        Heldere afspraken vooraf: de eerste inschatting is altijd gratis, en desgewenst werk ik met
-        een vaste totaalprijs voor het hele project.
+        Heldere afspraken: de inschatting is altijd gratis, en desgewenst werken we met een vaste
+        totaalprijs voor het hele project.
       </p>
       <figure class="mt-12">
-        <picture>
-          <source
-            type="image/webp"
-            :srcset="`${bouwWebp} 800w, ${bouwWebp2x} 1400w`"
-            sizes="(min-width: 1152px) 1088px, 100vw"
-          />
-          <img
-            :src="bouwJpg"
-            width="1400"
-            height="1050"
-            alt="Constructie in douglas hout van een buitenverblijf in aanbouw, met asymmetrische kap en schoren"
-            loading="lazy"
-            class="aspect-[21/9] w-full rounded-[4px] object-cover object-[center_62%]"
-          />
-        </picture>
+        <button
+          type="button"
+          class="block w-full cursor-zoom-in focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-oak-400"
+          aria-label="Vergroot foto van de constructie in aanbouw"
+          @click="
+            openLightbox({
+              webp: bouwLargeWebp,
+              jpg: bouwLargeJpg,
+              alt: 'Constructie in douglas hout van een buitenverblijf in aanbouw, met asymmetrische kap en schoren',
+              caption: 'In aanbouw: douglas constructie met asymmetrische kap',
+            })
+          "
+        >
+          <picture>
+            <source
+              type="image/webp"
+              :srcset="`${bouwWebp} 800w, ${bouwWebp2x} 1400w`"
+              sizes="(min-width: 1152px) 1088px, 100vw"
+            />
+            <img
+              :src="bouwJpg"
+              width="1400"
+              height="1050"
+              alt="Constructie in douglas hout van een buitenverblijf in aanbouw, met asymmetrische kap en schoren"
+              loading="lazy"
+              class="aspect-[21/9] w-full rounded-[4px] object-cover object-[center_62%]"
+            />
+          </picture>
+        </button>
         <figcaption class="mt-3 text-sm text-ink-600/70">
           In aanbouw: douglas constructie met asymmetrische kap — het balkenwerk dat straks het
           karakter van het buitenverblijf bepaalt.
@@ -240,10 +216,9 @@ const specs = ['Douglas hout', 'Glazen schuifwanden', 'Pannendak', 'Zinken goten
       </figure>
     </section>
 
-    <!-- 6 · Waarom -->
+    <!-- 5 · Waarom -->
     <section class="scroll-mt-16 bg-cream-100 py-20 sm:py-24" id="waarom">
       <div class="container-site">
-        <SectionLabel>Waar je op kunt rekenen</SectionLabel>
         <h2
           class="font-display text-3xl font-bold tracking-tight text-balance text-ink-900 sm:text-4xl"
         >
@@ -272,9 +247,8 @@ const specs = ['Douglas hout', 'Glazen schuifwanden', 'Pannendak', 'Zinken goten
       </div>
     </section>
 
-    <!-- 7 · Ervaringen -->
+    <!-- 6 · Ervaringen -->
     <section class="container-site scroll-mt-16 py-20 sm:py-28" id="ervaringen">
-      <SectionLabel>Ervaringen</SectionLabel>
       <h2
         class="font-display text-3xl font-bold tracking-tight text-balance text-ink-900 sm:text-4xl"
       >
@@ -295,37 +269,38 @@ const specs = ['Douglas hout', 'Glazen schuifwanden', 'Pannendak', 'Zinken goten
           </figcaption>
         </figure>
       </div>
-      <p class="mt-6 text-sm text-ink-600/70">
-        Ervaringen uit eerder werk van {{ site.owner.split(' ')[0] }} als zelfstandig timmerman.
-      </p>
     </section>
 
-    <!-- 8 · Over -->
+    <!-- 7 · Over -->
     <section class="scroll-mt-16 border-y border-line-200 bg-cream-100/60 py-20 sm:py-24" id="over">
       <div class="container-site max-w-3xl">
-        <SectionLabel>Over de maker</SectionLabel>
         <h2
           class="font-display text-3xl font-bold tracking-tight text-balance text-ink-900 sm:text-4xl"
         >
-          Van podium naar werkplaats
+          Twee makers, één ambacht
         </h2>
         <p class="mt-5 text-lg leading-relaxed">
-          In mijn carrière als musicus heb ik geleerd dat je pas ergens in uitblinkt als je je werk
-          met passie doet. Tijdens de coronajaren ontdekte ik dat die passie ook ergens anders kan
-          wonen: in hout, maat en constructie.
+          {{ site.brand.name }} is het werk van twee vakmannen met een gedeelde overtuiging: buiten
+          leven wordt beter met goed hout, een slim ontwerp en aandacht voor detail.
         </p>
         <p class="mt-4 leading-relaxed">
-          Sindsdien ontwerp en bouw ik — met dezelfde precisie waarmee ik ooit repeteerde. Elk
-          buitenverblijf is vakwerk waar ik mijn naam aan verbind. En zodra de nieuwe bedrijfsnaam
-          er is, lees je hem hier als eerste.
+          De een stond jarenlang als musicus op het podium en ontdekte tijdens de coronajaren dat
+          die precisie ook in hout kan wonen. Samen ontwerpen en bouwen we ieder buitenverblijf van
+          de eerste schets tot de oplevering — vakwerk waar we onze naam aan verbinden.
         </p>
         <p class="mt-6 font-display text-sm font-semibold tracking-wide text-spruce-700">
-          — {{ site.owner }}, timmerman in {{ site.location }}
+          — de makers van {{ site.brand.name }}
         </p>
+        <RouterLink
+          to="/galerij"
+          class="mt-6 inline-block font-medium text-spruce-700 underline decoration-oak-400/50 underline-offset-2 hover:text-spruce-900"
+        >
+          Bekijk ons werk in de galerij →
+        </RouterLink>
       </div>
     </section>
 
-    <!-- 9 · CTA -->
+    <!-- 8 · CTA -->
     <div class="pt-20 sm:pt-28">
       <CtaBanner />
     </div>

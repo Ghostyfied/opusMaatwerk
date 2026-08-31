@@ -11,8 +11,8 @@ const year = new Date().getFullYear()
       <div class="max-w-xs">
         <BrandMark on-dark />
         <p class="mt-4 text-sm leading-relaxed">
-          Houten buitenverblijven op maat — ontwerp en bouw door timmerman
-          {{ site.owner }} uit {{ site.location }}.
+          Buitenverblijven op maat — ontworpen en gebouwd door twee vakmannen uit
+          {{ site.location }}.
         </p>
       </div>
 
@@ -21,8 +21,9 @@ const year = new Date().getFullYear()
           Op deze site
         </p>
         <ul class="space-y-2">
-          <li><RouterLink class="hover:text-cream-50" to="/#diensten">Wat ik maak</RouterLink></li>
+          <li><RouterLink class="hover:text-cream-50" to="/#diensten">Wat we maken</RouterLink></li>
           <li><RouterLink class="hover:text-cream-50" to="/#werkwijze">Werkwijze</RouterLink></li>
+          <li><RouterLink class="hover:text-cream-50" to="/galerij">Galerij</RouterLink></li>
           <li><RouterLink class="hover:text-cream-50" to="/#ervaringen">Ervaringen</RouterLink></li>
           <li>
             <RouterLink class="hover:text-cream-50" to="/contact">Contact & offerte</RouterLink>
@@ -55,7 +56,7 @@ const year = new Date().getFullYear()
       <div
         class="container-site flex flex-col gap-2 py-5 text-xs text-cream-100/50 sm:flex-row sm:items-center sm:justify-between"
       >
-        <p>© {{ year }} {{ site.owner }} · alle rechten voorbehouden</p>
+        <p>© {{ year }} {{ site.brand.name }} · alle rechten voorbehouden</p>
         <p v-if="site.legal.kvk">KvK {{ site.legal.kvk }}</p>
         <p v-else>Bedrijfsgegevens (naam, KvK, btw-id) volgen bij inschrijving</p>
       </div>

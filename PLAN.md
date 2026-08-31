@@ -1,6 +1,6 @@
-# Project Buitenwerk — New Company Website Plan
+# Eigen Buiten — Website Plan
 
-> **Working title.** "Project Buitenwerk" is a disposable codename, **not** a name proposal. The client is launching a **new company** — name, logo, and domain do not exist yet. This plan builds the site brand-agnostic around a **placeholder identity** that can be swapped in one place the moment the real branding lands.
+> **Branding status.** The company name is now **"Eigen Buiten"** (chosen during the first feedback round; the site carries it via an interim wordmark). The logo and domain still don't exist — the site remains built around the swap-in-one-place identity layer so those land as a config change. "Project Buitenwerk" was the disposable working title before the name existed. Update: the business is run by **two makers**, and all site copy uses wij-vorm.
 
 A complete plan for building a new, professional, static Vue site hosted on GitHub Pages for the carpentry business of Tijmen Wehlburg (Culemborg NL), positioned around large wooden garden buildings (buitenverblijven). His current site, [opusmaatwerk.nl](https://opusmaatwerk.nl/), serves only as **source material** (story, testimonials, werkwijze content, photos) — the new site is a fresh brand, not a redesign of it.
 
@@ -23,8 +23,8 @@ A complete plan for building a new, professional, static Vue site hosted on GitH
 
 | Identity element  | Status | Placeholder until then                                                                |
 | ----------------- | ------ | ------------------------------------------------------------------------------------- |
-| Company name      | ❌ TBD | `[BEDRIJFSNAAM]` in copy/meta; "Project Buitenwerk" as internal codename              |
-| Logo              | ❌ TBD | Neutral placeholder mark (framed monogram/wordmark component, clearly temporary)      |
+| Company name      | ✅ **"Eigen Buiten"** | —                                                                      |
+| Logo              | ❌ TBD | Interim text wordmark in `BrandMark.vue`; real logo slots into the same component     |
 | Domain            | ❌ TBD | `ghostyfied.github.io/opusMaatwerk` during development                                |
 | E-mail            | ❌ TBD | Form via Formspree (works without a domain); `tel:`/WhatsApp once number is confirmed |
 | Brand colors/type | ❌ TBD | Provisional design system (§5), built entirely as swappable tokens                    |
