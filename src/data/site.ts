@@ -16,15 +16,12 @@ export const site = {
   },
   owner: 'Tijmen Wehlburg',
   location: 'Culemborg',
-  serviceArea: 'Culemborg en omstreken (± 50 km)',
   contact: {
     /** Interim address — replace with an address on the new domain. */
     email: 'tijmen@wehlburg.nu',
     phone: null as string | null,
     /** wa.me number, digits only (e.g. '31612345678'). */
     whatsapp: null as string | null,
-    /** Formspree/FormSubmit endpoint; the form falls back to mailto while null. */
-    formEndpoint: null as string | null,
   },
   legal: {
     kvk: null as string | null,

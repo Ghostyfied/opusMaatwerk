@@ -74,7 +74,9 @@ useHead({
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
           <RouterLink to="/galerij" class="btn-on-dark">Bekijk ons werk</RouterLink>
-          <RouterLink to="/contact" class="btn-ghost-on-dark">Vraag vrijblijvend advies</RouterLink>
+          <RouterLink to="/#contact" class="btn-ghost-on-dark"
+            >Vraag vrijblijvend advies</RouterLink
+          >
         </div>
       </div>
     </section>

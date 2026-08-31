@@ -26,7 +26,7 @@ const year = new Date().getFullYear()
           <li><RouterLink class="hover:text-cream-50" to="/galerij">Galerij</RouterLink></li>
           <li><RouterLink class="hover:text-cream-50" to="/#ervaringen">Ervaringen</RouterLink></li>
           <li>
-            <RouterLink class="hover:text-cream-50" to="/contact">Contact & offerte</RouterLink>
+            <RouterLink class="hover:text-cream-50" to="/#contact">Contact</RouterLink>
           </li>
         </ul>
       </nav>
@@ -47,7 +47,6 @@ const year = new Date().getFullYear()
             </a>
           </li>
           <li v-else class="text-cream-100/50">Telefoonnummer volgt</li>
-          <li>Werkgebied: {{ site.serviceArea }}</li>
         </ul>
       </div>
     </div>

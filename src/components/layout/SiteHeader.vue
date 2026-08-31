@@ -9,7 +9,7 @@ const nav = [
   { label: 'Galerij', to: '/galerij' },
   { label: 'Ervaringen', to: '/#ervaringen' },
   { label: 'Over', to: '/#over' },
-  { label: 'Contact', to: '/contact' },
+  { label: 'Contact', to: '/#contact' },
 ]
 
 const open = ref(false)
@@ -38,7 +38,7 @@ watch(
         >
           {{ item.label }}
         </RouterLink>
-        <RouterLink to="/contact" class="btn-primary py-2.5!">Vraag advies aan</RouterLink>
+        <RouterLink to="/#contact" class="btn-primary py-2.5!">Vraag advies aan</RouterLink>
       </nav>
 
       <button
@@ -79,7 +79,7 @@ watch(
         >
           {{ item.label }}
         </RouterLink>
-        <RouterLink to="/contact" class="btn-primary mt-2">Vraag advies aan</RouterLink>
+        <RouterLink to="/#contact" class="btn-primary mt-2">Vraag advies aan</RouterLink>
       </div>
     </nav>
   </header>

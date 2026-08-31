@@ -2,14 +2,14 @@
 import { useHead } from '@unhead/vue'
 import { openLightbox } from '@/composables/lightbox'
 import { galleryPhotos } from '@/data/gallery'
+import { site } from '@/data/site'
 
 useHead({
   title: 'Galerij · Eigen Buiten',
   meta: [
     {
       name: 'description',
-      content:
-        'Een greep uit ons werk: tuinkamers, overkappingen, ateliers en maatwerk in hout — gebouwd in Culemborg en omstreken.',
+      content: 'Een greep uit ons werk: tuinkamers, overkappingen, ateliers en maatwerk in hout.',
     },
   ],
 })
@@ -63,12 +63,12 @@ useHead({
     </div>
 
     <p class="mt-10 max-w-2xl text-sm text-ink-600/80">
-      Het portfolio groeit — per project volgen later meer foto's en details. Zelf plannen?
-      <RouterLink
-        to="/contact"
+      Het portfolio groeit — per project volgen later meer foto's en details. Zelf plannen? Mail ons
+      op
+      <a
+        :href="`mailto:${site.contact.email}`"
         class="font-medium text-spruce-700 underline decoration-oak-400/50 underline-offset-2 hover:text-spruce-900"
-      >
-        Vraag vrijblijvend advies aan </RouterLink
+        >{{ site.contact.email }}</a
       >.
     </p>
   </div>
