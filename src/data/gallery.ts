@@ -50,7 +50,6 @@ export interface GalleryPhoto {
   width: number
   height: number
   alt: string
-  caption: string
 }
 
 export const galleryPhotos: GalleryPhoto[] = [
@@ -64,7 +63,6 @@ export const galleryPhotos: GalleryPhoto[] = [
     width: 1438,
     height: 1078,
     alt: 'Houten tuinkamer met glazen schuifwanden en pannendak, met de twee makers op de voorgrond',
-    caption: 'Tuinkamer in douglas met glazen schuifwanden, pannendak en zinken goten',
   },
   {
     id: 'tuinkamer-interieur',
@@ -76,7 +74,6 @@ export const galleryPhotos: GalleryPhoto[] = [
     width: 1600,
     height: 1200,
     alt: 'Interieur van een tuinkamer met loungehoek, kussens en wandverlichting achter een glazen schuifwand',
-    caption: 'Binnen in de tuinkamer: loungehoek met vaste bank en verlichting',
   },
   {
     id: 'overkapping-veranda',
@@ -88,7 +85,6 @@ export const galleryPhotos: GalleryPhoto[] = [
     width: 1600,
     height: 1200,
     alt: 'Vrijstaande houten overkapping met lichtdoorlatend dak en aangebouwde berging',
-    caption: 'Vrijstaande overkapping met lichtdoorlatend dak',
   },
   {
     id: 'tuinhuis-atelier',
@@ -100,7 +96,6 @@ export const galleryPhotos: GalleryPhoto[] = [
     width: 1600,
     height: 1200,
     alt: 'Modern atelier met verticale gevelbekleding van lariks en daklichten',
-    caption: 'Atelier met verticale lariks bekleding en daklichten',
   },
   {
     id: 'buitenkeuken-hoek',
@@ -112,7 +107,6 @@ export const galleryPhotos: GalleryPhoto[] = [
     width: 1600,
     height: 1200,
     alt: 'Buitenkeuken op maat in douglas hout met spoelbak en donker werkblad',
-    caption: 'Buitenkeuken op maat met spoelbak en werkblad',
   },
   {
     id: 'tuinkamer-platdak',
@@ -124,7 +118,6 @@ export const galleryPhotos: GalleryPhoto[] = [
     width: 1600,
     height: 1200,
     alt: 'Tuinkamer met plat dak, glazen schuifwanden en regenton met zinken afvoer',
-    caption: 'Tuinkamer met plat dak en glazen schuifwanden',
   },
   {
     id: 'buitenkeuken-veranda',
@@ -136,7 +129,6 @@ export const galleryPhotos: GalleryPhoto[] = [
     width: 1600,
     height: 1200,
     alt: 'Maatwerk buitenkeuken met kamado-barbecue onder een houten veranda met windscherm',
-    caption: 'Buitenkeuken met kamado onder een veranda',
   },
   {
     id: 'constructie',
@@ -148,6 +140,5 @@ export const galleryPhotos: GalleryPhoto[] = [
     width: 1400,
     height: 1050,
     alt: 'Constructie in douglas hout van een buitenverblijf in aanbouw, met asymmetrische kap en schoren',
-    caption: 'In aanbouw: douglas constructie met asymmetrische kap',
   },
 ]

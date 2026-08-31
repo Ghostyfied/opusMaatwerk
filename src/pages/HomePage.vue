@@ -189,7 +189,6 @@ useHead({
               webp: bouwLargeWebp,
               jpg: bouwLargeJpg,
               alt: 'Constructie in douglas hout van een buitenverblijf in aanbouw, met asymmetrische kap en schoren',
-              caption: 'In aanbouw: douglas constructie met asymmetrische kap',
             })
           "
         >
@@ -209,10 +208,6 @@ useHead({
             />
           </picture>
         </button>
-        <figcaption class="mt-3 text-sm text-ink-600/70">
-          In aanbouw: douglas constructie met asymmetrische kap — het balkenwerk dat straks het
-          karakter van het buitenverblijf bepaalt.
-        </figcaption>
       </figure>
     </section>
 

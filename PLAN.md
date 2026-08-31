@@ -21,13 +21,13 @@ A complete plan for building a new, professional, static Vue site hosted on GitH
 
 ### Branding status & placeholder strategy
 
-| Identity element  | Status                | Placeholder until then                                                                                                             |
-| ----------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Company name      | ✅ **"Eigen Buiten"** | —                                                                                                                                  |
+| Identity element  | Status                | Placeholder until then                                                                                                                                                |
+| ----------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Company name      | ✅ **"Eigen Buiten"** | —                                                                                                                                                                     |
 | Logo              | ✅ delivered          | Round EB icon in navbar + favicon, full logo in footer (`BrandMark.vue` variants, sources in `src/assets/brand/`); oak tokens tuned to the exact logo ochre `#C18F50` |
-| Domain            | ❌ TBD                | `ghostyfied.github.io/opusMaatwerk` during development                                                                             |
-| E-mail            | ❌ TBD                | Form via Formspree (works without a domain); `tel:`/WhatsApp once number is confirmed                                              |
-| Brand colors/type | ❌ TBD                | Provisional design system (§5), built entirely as swappable tokens                                                                 |
+| Domain            | ❌ TBD                | `ghostyfied.github.io/opusMaatwerk` during development                                                                                                                |
+| E-mail            | ❌ TBD                | Form via Formspree (works without a domain); `tel:`/WhatsApp once number is confirmed                                                                                 |
+| Brand colors/type | ❌ TBD                | Provisional design system (§5), built entirely as swappable tokens                                                                                                    |
 
 **Swap mechanics (build requirement):** all identity lives in exactly three places — `src/data/site.ts` (name, tagline, domain, e-mail, phone, KvK, socials → feeds copy, meta tags, JSON-LD), a `BrandMark.vue` component (placeholder mark now, real logo later), and the Tailwind `@theme` token block (colors/fonts). Rebranding = editing those three files. Nothing else in the codebase may hard-code identity.
 

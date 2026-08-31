@@ -40,7 +40,6 @@ useHead({
               webp: photo.largeWebp,
               jpg: photo.largeJpg,
               alt: photo.alt,
-              caption: photo.caption,
             })
           "
         >
@@ -60,7 +59,6 @@ useHead({
             />
           </picture>
         </button>
-        <figcaption class="mt-2 text-sm text-ink-600/80">{{ photo.caption }}</figcaption>
       </figure>
     </div>
 
