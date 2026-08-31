@@ -1,6 +1,6 @@
 # Eigen Buiten — Website Plan
 
-> **Branding status.** The company name is now **"Eigen Buiten"** (chosen during the first feedback round; the site carries it via an interim wordmark). The logo and domain still don't exist — the site remains built around the swap-in-one-place identity layer so those land as a config change. "Project Buitenwerk" was the disposable working title before the name existed. Update: the business is run by **two makers**, and all site copy uses wij-vorm.
+> **Branding status.** The company name is **"Eigen Buiten"** and the logo has been delivered (ochre square, cream roof mark, rounded wordmark — recreated as SVG in `BrandMark.vue`, original in `src/assets/brand/`). Only the domain and e-mail are still pending; the identity layer keeps those a config change. "Project Buitenwerk" was the disposable working title before the name existed. The business is run by **two makers**, and all site copy uses wij-vorm.
 
 A complete plan for building a new, professional, static Vue site hosted on GitHub Pages for the carpentry business of Tijmen Wehlburg (Culemborg NL), positioned around large wooden garden buildings (buitenverblijven). His current site, [opusmaatwerk.nl](https://opusmaatwerk.nl/), serves only as **source material** (story, testimonials, werkwijze content, photos) — the new site is a fresh brand, not a redesign of it.
 
@@ -21,13 +21,13 @@ A complete plan for building a new, professional, static Vue site hosted on GitH
 
 ### Branding status & placeholder strategy
 
-| Identity element  | Status | Placeholder until then                                                                |
-| ----------------- | ------ | ------------------------------------------------------------------------------------- |
-| Company name      | ✅ **"Eigen Buiten"** | —                                                                      |
-| Logo              | ❌ TBD | Interim text wordmark in `BrandMark.vue`; real logo slots into the same component     |
-| Domain            | ❌ TBD | `ghostyfied.github.io/opusMaatwerk` during development                                |
-| E-mail            | ❌ TBD | Form via Formspree (works without a domain); `tel:`/WhatsApp once number is confirmed |
-| Brand colors/type | ❌ TBD | Provisional design system (§5), built entirely as swappable tokens                    |
+| Identity element  | Status                | Placeholder until then                                                                |
+| ----------------- | --------------------- | ------------------------------------------------------------------------------------- |
+| Company name      | ✅ **"Eigen Buiten"** | —                                                                                     |
+| Logo              | ✅ delivered          | Recreated as SVG (badge + Quicksand lockup) in `BrandMark.vue` + `favicon.svg`; oak tokens tuned to the exact logo ochre `#C18F50` |
+| Domain            | ❌ TBD                | `ghostyfied.github.io/opusMaatwerk` during development                                |
+| E-mail            | ❌ TBD                | Form via Formspree (works without a domain); `tel:`/WhatsApp once number is confirmed |
+| Brand colors/type | ❌ TBD                | Provisional design system (§5), built entirely as swappable tokens                    |
 
 **Swap mechanics (build requirement):** all identity lives in exactly three places — `src/data/site.ts` (name, tagline, domain, e-mail, phone, KvK, socials → feeds copy, meta tags, JSON-LD), a `BrandMark.vue` component (placeholder mark now, real logo later), and the Tailwind `@theme` token block (colors/fonts). Rebranding = editing those three files. Nothing else in the codebase may hard-code identity.
 

@@ -9,9 +9,10 @@
   --color-spruce-900: #22362a;
   --color-spruce-700: #35523f;
   --color-spruce-500: #57795f;
-  --color-oak-600: #9a6b33;
-  --color-oak-400: #c08a4e;
+  --color-oak-600: #9c6f35;
+  --color-oak-400: #c18f50; /* exact logo ochre */
   --color-oak-300: #ddbb8e;
+  --color-logo-cream: #e7dab7; /* exact logo cream */
   --color-cream-50: #faf8f2;
   --color-cream-100: #f2ede2;
   --color-card: #fffefa;
@@ -22,6 +23,7 @@
   --font-display: 'Archivo', ui-sans-serif, system-ui, sans-serif;
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-serif: 'Lora', Georgia, serif;
+  --font-logo: 'Quicksand', 'Archivo', ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {

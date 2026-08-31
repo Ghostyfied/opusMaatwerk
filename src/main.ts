@@ -9,6 +9,7 @@ import '@fontsource/inter/400.css'
 import '@fontsource/inter/500.css'
 import '@fontsource/inter/600.css'
 import '@fontsource/lora/400-italic.css'
+import '@fontsource/quicksand/600.css'
 import './assets/main.css'
 
 export const createApp = ViteSSG(App, {
