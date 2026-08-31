@@ -16,6 +16,9 @@ importers:
       '@fontsource/lora':
         specifier: ^5.3.0
         version: 5.3.0
+      '@fontsource/quicksand':
+        specifier: ^5.3.0
+        version: 5.3.0
       '@unhead/vue':
         specifier: ^2.1.17
         version: 2.1.17(vue@3.5.41(typescript@5.9.3))
@@ -304,6 +307,12 @@ packages:
     resolution:
       {
         integrity: sha512-OK1g1z01rHVPqO5aw/FOIoDqc46KKYZdgL3NOLkxLWDk6QhDHhdr/h2BV1cke6gTvR1tzpDfdKyUkGsC+sQLeQ==,
+      }
+
+  '@fontsource/quicksand@5.3.0':
+    resolution:
+      {
+        integrity: sha512-epmMUyXI39f88bZSCyKlHTZqUWg4O7DqrTXOKqsqbVKMLshX9RtIYCUIw+G2nOfEwdIHIjYbeWdwHRcEzRXBRQ==,
       }
 
   '@humanfs/core@0.19.2':
@@ -2576,6 +2585,8 @@ snapshots:
   '@fontsource/inter@5.3.0': {}
 
   '@fontsource/lora@5.3.0': {}
+
+  '@fontsource/quicksand@5.3.0': {}
 
   '@humanfs/core@0.19.2':
     dependencies:
