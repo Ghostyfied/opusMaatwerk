@@ -27,8 +27,7 @@ export const site = {
     kvk: null as string | null,
     btw: null as string | null,
   },
-  /** New domain, once registered (e.g. 'https://voorbeeld.nl'). */
-  domain: null as string | null,
+  domain: 'https://eigenbuiten.nl' as string | null,
   /** Keep false until launch: renders a noindex meta tag on every page. */
   indexable: false,
 }
