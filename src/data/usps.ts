@@ -11,16 +11,14 @@ export const usps: Usp[] = [
   },
   {
     title: 'Afspraak is afspraak',
-    description:
-      'Planning en oplevering zoals afgesproken — "haast een unicum in de (ver)bouwwereld", aldus een opdrachtgever.',
+    description: 'Duidelijke offertes, planning en oplevering zoals afgesproken.',
   },
   {
     title: 'Duurzaam gebouwd',
-    description:
-      'Degelijke houtsoorten, gebouwd om decennia mee te gaan, en hergebruik van materialen waar dat kan.',
+    description: 'Degelijke constructies, gebouwd om lang mee te gaan.',
   },
   {
     title: 'Zonder zorgen',
-    description: 'Verzekerd werk, garantie op vakmanschap en heldere afspraken vooraf.',
+    description: 'Verzekerd werk, garantie op vakmanschap en service waar nodig.',
   },
 ]
