@@ -4,8 +4,9 @@ import { useRoute } from 'vue-router'
 import BrandMark from '@/components/ui/BrandMark.vue'
 
 const nav = [
-  { label: 'Wat ik maak', to: '/#diensten' },
+  { label: 'Wat we maken', to: '/#diensten' },
   { label: 'Werkwijze', to: '/#werkwijze' },
+  { label: 'Galerij', to: '/galerij' },
   { label: 'Ervaringen', to: '/#ervaringen' },
   { label: 'Over', to: '/#over' },
   { label: 'Contact', to: '/contact' },

@@ -8,7 +8,7 @@
           Plannen voor een buitenverblijf?
         </h2>
         <p class="mt-2 text-cream-100/90">
-          Vertel me over je tuin en je wensen — ik denk vrijblijvend met je mee over de
+          Vertel ons over je tuin en je wensen — we denken vrijblijvend met je mee over de
           mogelijkheden, ook als je nog geen concreet plan hebt.
         </p>
       </div>

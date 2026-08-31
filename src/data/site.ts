@@ -8,12 +8,11 @@
  */
 export const site = {
   brand: {
-    /** Placeholder until the company name exists. */
-    name: '[Bedrijfsnaam]',
-    nameIsPlaceholder: true,
-    /** Internal codename only — never rendered on the site itself. */
+    name: 'Eigen Buiten',
+    nameIsPlaceholder: false,
+    /** Former internal codename, kept for repo history context. */
     workingTitle: 'Project Buitenwerk',
-    tagline: 'Houten buitenverblijven op maat',
+    tagline: 'Buitenverblijven op maat',
   },
   owner: 'Tijmen Wehlburg',
   location: 'Culemborg',

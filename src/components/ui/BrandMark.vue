@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { site } from '@/data/site'
-
 withDefaults(
   defineProps<{
     /** Rendered on a dark (spruce) background or a light (cream) one. */
@@ -12,15 +10,14 @@ withDefaults(
 
 <template>
   <!--
-    Placeholder brand mark: the future logo slots into this component
-    with the same API (see PLAN.md §5). Dashed frame = deliberately
-    temporary, styled so demos don't look broken.
+    Interim wordmark for "Eigen Buiten" — the real logo, when designed,
+    slots into this component with the same API (see PLAN.md §5).
   -->
   <span
-    class="inline-flex items-center gap-2 rounded-[3px] border-[1.5px] border-dashed px-3 py-1.5 font-display text-[13px] font-semibold tracking-[0.18em] uppercase"
-    :class="onDark ? 'border-cream-50/50 text-cream-50' : 'border-spruce-500/60 text-spruce-700'"
-    title="Logo en bedrijfsnaam volgen"
+    class="inline-flex items-baseline gap-[0.45em] font-display text-[15px] tracking-[0.2em] uppercase"
+    :class="onDark ? 'text-cream-50' : 'text-spruce-900'"
   >
-    {{ site.brand.name }}
+    <span class="font-bold">Eigen</span>
+    <span class="font-medium" :class="onDark ? 'text-oak-300' : 'text-oak-600'">Buiten</span>
   </span>
 </template>

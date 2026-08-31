@@ -1,15 +1,23 @@
-import tuinkamerJpg from '@/assets/photos/tuinkamer-platdak-640.jpg'
-import tuinkamerWebp from '@/assets/photos/tuinkamer-platdak-640.webp'
-import tuinkamerWebp2x from '@/assets/photos/tuinkamer-platdak-960.webp'
+import interieurJpg from '@/assets/photos/tuinkamer-interieur-640.jpg'
+import interieurWebp from '@/assets/photos/tuinkamer-interieur-640.webp'
+import interieurWebp2x from '@/assets/photos/tuinkamer-interieur-960.webp'
+import interieurLargeWebp from '@/assets/photos/tuinkamer-interieur-1600.webp'
+import interieurLargeJpg from '@/assets/photos/tuinkamer-interieur-1600.jpg'
 import overkappingJpg from '@/assets/photos/overkapping-veranda-640.jpg'
 import overkappingWebp from '@/assets/photos/overkapping-veranda-640.webp'
 import overkappingWebp2x from '@/assets/photos/overkapping-veranda-960.webp'
-import tuinhuisJpg from '@/assets/photos/tuinhuis-atelier-640.jpg'
-import tuinhuisWebp from '@/assets/photos/tuinhuis-atelier-640.webp'
-import tuinhuisWebp2x from '@/assets/photos/tuinhuis-atelier-960.webp'
+import overkappingLargeWebp from '@/assets/photos/overkapping-veranda-1600.webp'
+import overkappingLargeJpg from '@/assets/photos/overkapping-veranda-1600.jpg'
+import atelierJpg from '@/assets/photos/tuinhuis-atelier-640.jpg'
+import atelierWebp from '@/assets/photos/tuinhuis-atelier-640.webp'
+import atelierWebp2x from '@/assets/photos/tuinhuis-atelier-960.webp'
+import atelierLargeWebp from '@/assets/photos/tuinhuis-atelier-1600.webp'
+import atelierLargeJpg from '@/assets/photos/tuinhuis-atelier-1600.jpg'
 import buitenkeukenJpg from '@/assets/photos/buitenkeuken-hoek-640.jpg'
 import buitenkeukenWebp from '@/assets/photos/buitenkeuken-hoek-640.webp'
 import buitenkeukenWebp2x from '@/assets/photos/buitenkeuken-hoek-960.webp'
+import buitenkeukenLargeWebp from '@/assets/photos/buitenkeuken-hoek-1600.webp'
+import buitenkeukenLargeJpg from '@/assets/photos/buitenkeuken-hoek-1600.jpg'
 
 export interface ServiceImage {
   /** 640w webp */
@@ -18,6 +26,9 @@ export interface ServiceImage {
   webp2x: string
   /** 640w jpeg fallback */
   jpg: string
+  /** enlarged (lightbox) sources */
+  largeWebp: string
+  largeJpg: string
   alt: string
 }
 
@@ -33,10 +44,12 @@ export const services: Service[] = [
     description:
       'Royale tuinkamers, desgewenst met glazen schuifwanden. Buiten zitten, het hele jaar door.',
     image: {
-      webp: tuinkamerWebp,
-      webp2x: tuinkamerWebp2x,
-      jpg: tuinkamerJpg,
-      alt: 'Tuinkamer met plat dak, glazen schuifwanden en regenton met zinken afvoer',
+      webp: interieurWebp,
+      webp2x: interieurWebp2x,
+      jpg: interieurJpg,
+      largeWebp: interieurLargeWebp,
+      largeJpg: interieurLargeJpg,
+      alt: 'Interieur van een tuinkamer met loungehoek, kussens en wandverlichting achter een glazen schuifwand',
     },
   },
   {
@@ -47,17 +60,21 @@ export const services: Service[] = [
       webp: overkappingWebp,
       webp2x: overkappingWebp2x,
       jpg: overkappingJpg,
+      largeWebp: overkappingLargeWebp,
+      largeJpg: overkappingLargeJpg,
       alt: 'Vrijstaande houten overkapping met lichtdoorlatend dak en aangebouwde berging',
     },
   },
   {
-    title: 'Tuinhuizen & schuren',
+    title: 'Ateliers en schuren',
     description: 'Van berging tot atelier: degelijk gebouwd, onderhoudsarm en precies op maat.',
     image: {
-      webp: tuinhuisWebp,
-      webp2x: tuinhuisWebp2x,
-      jpg: tuinhuisJpg,
-      alt: 'Modern tuinhuis met verticale gevelbekleding van lariks en daklichten',
+      webp: atelierWebp,
+      webp2x: atelierWebp2x,
+      jpg: atelierJpg,
+      largeWebp: atelierLargeWebp,
+      largeJpg: atelierLargeJpg,
+      alt: 'Modern atelier met verticale gevelbekleding van lariks en daklichten',
     },
   },
   {
@@ -68,6 +85,8 @@ export const services: Service[] = [
       webp: buitenkeukenWebp,
       webp2x: buitenkeukenWebp2x,
       jpg: buitenkeukenJpg,
+      largeWebp: buitenkeukenLargeWebp,
+      largeJpg: buitenkeukenLargeJpg,
       alt: 'Buitenkeuken op maat in douglas hout met spoelbak en donker werkblad',
     },
   },
