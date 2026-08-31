@@ -42,7 +42,7 @@ export const services: Service[] = [
   {
     title: 'Tuinkamers & buitenverblijven',
     description:
-      'Royale tuinkamers, desgewenst met glazen schuifwanden. Buiten zitten, het hele jaar door.',
+      'Tuinkamers, desgewenst met glazen schuifwanden, een houtkachel, verlichting, etc. Buiten zitten, het hele jaar door.',
     image: {
       webp: interieurWebp,
       webp2x: interieurWebp2x,
@@ -55,7 +55,7 @@ export const services: Service[] = [
   {
     title: "Overkappingen & veranda's",
     description:
-      'Robuuste houten constructies met pannendak, EPDM of lichtdoorlatend dak — vrijstaand of tegen het huis aan.',
+      'Houten constructies met pannendak, EPDM of lichtdoorlatend dak — vrijstaand of tegen het huis aan.',
     image: {
       webp: overkappingWebp,
       webp2x: overkappingWebp2x,

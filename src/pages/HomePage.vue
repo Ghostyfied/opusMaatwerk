@@ -88,13 +88,13 @@ useHead({
           Een buitenverblijf is geen bouwpakket
         </h2>
         <p class="mt-5 text-lg leading-relaxed">
-          Wij ontwerpen en bouwen houten buitenverblijven die kloppen — bij je tuin, je huis en je
-          budget. Geen standaardmaten uit een catalogus, maar robuust vakwerk in douglas, lariks of
-          eiken: samen bedacht, degelijk gebouwd en tot in de details afgewerkt.
+          Wij ontwerpen en bouwen houten buitenverblijven die kloppen — bij je tuin, bij jou en je
+          budget. Geen standaardontwerpen uit een catalogus, maar uniek vakwerk in douglas, lariks
+          of eiken: samen met jou bedacht, degelijk gebouwd en tot in de details afgewerkt.
         </p>
         <p class="mt-4 leading-relaxed">
-          Grote tuinkamer of lastige hoek, strak plan of nog geen idee: we denken met je mee en
-          komen met opties waar je zelf misschien nog niet aan had gedacht.
+          Heb je al een strak plan of nog geen idee: we denken met je mee en komen met opties waar
+          je zelf misschien nog niet aan had gedacht.
         </p>
       </div>
     </section>

@@ -25,8 +25,8 @@ watch(
 <template>
   <header class="sticky top-0 z-40 border-b border-line-200 bg-cream-50/95 backdrop-blur">
     <div class="container-site flex h-16 items-center justify-between gap-4">
-      <RouterLink to="/" class="shrink-0" aria-label="Naar de homepage">
-        <BrandMark />
+      <RouterLink to="/" class="shrink-0" aria-label="Eigen Buiten — naar de homepage">
+        <BrandMark variant="icon" />
       </RouterLink>
 
       <nav class="hidden items-center gap-6 lg:flex" aria-label="Hoofdmenu">

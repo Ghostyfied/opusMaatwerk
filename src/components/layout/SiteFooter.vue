@@ -9,7 +9,7 @@ const year = new Date().getFullYear()
   <footer class="bg-spruce-900 text-cream-100/80">
     <div class="container-site grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-3">
       <div class="max-w-xs">
-        <BrandMark on-dark />
+        <BrandMark variant="full" />
         <p class="mt-4 text-sm leading-relaxed">
           Buitenverblijven op maat — ontworpen en gebouwd door twee vakmannen uit
           {{ site.location }}.
