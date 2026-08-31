@@ -13,7 +13,8 @@ export const steps: Step[] = [
   },
   {
     title: 'Raming',
-    description: 'Een inschatting van uren en kosten, zodat je weet waar je aan toe bent.',
+    description:
+      'Een inschatting van kosten, zodat je weet waar je aan begint voor we de volgende stap zetten.',
     note: 'gratis',
   },
   {

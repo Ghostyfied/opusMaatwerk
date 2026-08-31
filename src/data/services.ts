@@ -79,8 +79,7 @@ export const services: Service[] = [
   },
   {
     title: 'Maatwerk binnen & buiten',
-    description:
-      'Buitenkeukens, kasten, deuren en slimme oplossingen — het timmerwerk waar het ooit mee begon.',
+    description: 'Buitenkeukens, kasten, deuren en slimme oplossingen.',
     image: {
       webp: buitenkeukenWebp,
       webp2x: buitenkeukenWebp2x,
