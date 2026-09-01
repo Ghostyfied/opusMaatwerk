@@ -28,6 +28,6 @@ export const site = {
     btw: null as string | null,
   },
   domain: 'https://eigenbuiten.nl' as string | null,
-  /** Keep false until launch: renders a noindex meta tag on every page. */
-  indexable: false,
+  /** Launched 2026-09: pages are indexable. */
+  indexable: true,
 }

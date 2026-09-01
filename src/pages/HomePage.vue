@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useHead } from '@unhead/vue'
 import CtaBanner from '@/components/blocks/CtaBanner.vue'
+import { usePageSeo } from '@/composables/seo'
 import { services } from '@/data/services'
 import { site } from '@/data/site'
 import { steps } from '@/data/steps'
@@ -15,15 +15,11 @@ import bouwWebp from '@/assets/photos/constructie-800.webp'
 import bouwWebp2x from '@/assets/photos/constructie-1400.webp'
 import bouwJpg from '@/assets/photos/constructie-800.jpg'
 
-useHead({
+usePageSeo({
   title: 'Eigen Buiten — Buitenverblijven op maat · Culemborg',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'Tuinkamers, overkappingen en tuinhuizen in hout — van ontwerp tot uitvoering, gebouwd door twee vakmannen uit Culemborg.',
-    },
-  ],
+  description:
+    'Tuinkamers, overkappingen en tuinhuizen in hout — van ontwerp tot uitvoering, gebouwd door twee vakmannen uit Culemborg.',
+  path: '/',
 })
 </script>
 

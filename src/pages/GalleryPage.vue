@@ -1,16 +1,12 @@
 <script setup lang="ts">
-import { useHead } from '@unhead/vue'
 import { openLightbox } from '@/composables/lightbox'
+import { usePageSeo } from '@/composables/seo'
 import { galleryPhotos } from '@/data/gallery'
 
-useHead({
+usePageSeo({
   title: 'Galerij · Eigen Buiten',
-  meta: [
-    {
-      name: 'description',
-      content: 'Een greep uit ons werk: tuinkamers, overkappingen, ateliers en maatwerk in hout.',
-    },
-  ],
+  description: 'Een greep uit ons werk: tuinkamers, overkappingen, ateliers en maatwerk in hout.',
+  path: '/galerij/',
 })
 </script>
 

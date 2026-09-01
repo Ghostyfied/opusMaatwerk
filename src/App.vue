@@ -4,13 +4,38 @@ import SiteFooter from '@/components/layout/SiteFooter.vue'
 import SiteHeader from '@/components/layout/SiteHeader.vue'
 import LightboxOverlay from '@/components/ui/LightboxOverlay.vue'
 import { site } from '@/data/site'
+import logoFull from '@/assets/brand/logo-full-360.jpg'
 
 useHead({
   htmlAttrs: { lang: 'nl' },
   meta: [
-    // noindex until launch — flipped via site.indexable (PLAN.md §6)
     ...(site.indexable ? [] : [{ name: 'robots', content: 'noindex, nofollow' }]),
     { name: 'theme-color', content: '#35523f' },
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'HomeAndConstructionBusiness',
+        name: site.brand.name,
+        description:
+          'Ontwerp en bouw van houten buitenverblijven: tuinkamers, overkappingen, ateliers, tuinhuizen en maatwerk.',
+        url: site.domain,
+        email: site.contact.email,
+        image: `${site.domain}${logoFull}`,
+        logo: `${site.domain}${logoFull}`,
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: site.location,
+          addressCountry: 'NL',
+        },
+        founder: [
+          { '@type': 'Person', name: 'Tijmen Wehlburg' },
+          { '@type': 'Person', name: 'Jos Bodewes' },
+        ],
+      }),
+    },
   ],
 })
 </script>
