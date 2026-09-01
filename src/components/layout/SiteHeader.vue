@@ -9,7 +9,7 @@ const nav = [
   { label: 'Galerij', to: '/galerij' },
   { label: 'Ervaringen', to: '/#ervaringen' },
   { label: 'Over', to: '/#over' },
-  { label: 'Contact', to: '/contact' },
+  { label: 'Contact', to: '/#contact' },
 ]
 
 const open = ref(false)
@@ -25,8 +25,8 @@ watch(
 <template>
   <header class="sticky top-0 z-40 border-b border-line-200 bg-cream-50/95 backdrop-blur">
     <div class="container-site flex h-16 items-center justify-between gap-4">
-      <RouterLink to="/" class="shrink-0" aria-label="Naar de homepage">
-        <BrandMark />
+      <RouterLink to="/" class="shrink-0" aria-label="Eigen Buiten — naar de homepage">
+        <BrandMark variant="icon" />
       </RouterLink>
 
       <nav class="hidden items-center gap-6 lg:flex" aria-label="Hoofdmenu">
@@ -38,7 +38,7 @@ watch(
         >
           {{ item.label }}
         </RouterLink>
-        <RouterLink to="/contact" class="btn-primary py-2.5!">Vraag advies aan</RouterLink>
+        <RouterLink to="/#contact" class="btn-primary py-2.5!">Vraag advies aan</RouterLink>
       </nav>
 
       <button
@@ -79,7 +79,7 @@ watch(
         >
           {{ item.label }}
         </RouterLink>
-        <RouterLink to="/contact" class="btn-primary mt-2">Vraag advies aan</RouterLink>
+        <RouterLink to="/#contact" class="btn-primary mt-2">Vraag advies aan</RouterLink>
       </div>
     </nav>
   </header>

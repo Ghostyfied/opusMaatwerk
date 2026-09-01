@@ -8,8 +8,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content:
-        'Een greep uit ons werk: tuinkamers, overkappingen, ateliers en maatwerk in hout — gebouwd in Culemborg en omstreken.',
+      content: 'Een greep uit ons werk: tuinkamers, overkappingen, ateliers en maatwerk in hout.',
     },
   ],
 })
@@ -40,7 +39,6 @@ useHead({
               webp: photo.largeWebp,
               jpg: photo.largeJpg,
               alt: photo.alt,
-              caption: photo.caption,
             })
           "
         >
@@ -60,18 +58,7 @@ useHead({
             />
           </picture>
         </button>
-        <figcaption class="mt-2 text-sm text-ink-600/80">{{ photo.caption }}</figcaption>
       </figure>
     </div>
-
-    <p class="mt-10 max-w-2xl text-sm text-ink-600/80">
-      Het portfolio groeit — per project volgen later meer foto's en details. Zelf plannen?
-      <RouterLink
-        to="/contact"
-        class="font-medium text-spruce-700 underline decoration-oak-400/50 underline-offset-2 hover:text-spruce-900"
-      >
-        Vraag vrijblijvend advies aan </RouterLink
-      >.
-    </p>
   </div>
 </template>

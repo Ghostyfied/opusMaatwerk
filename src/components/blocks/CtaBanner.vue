@@ -1,5 +1,11 @@
+<script setup lang="ts">
+import { site } from '@/data/site'
+
+const mailto = `mailto:${site.contact.email}?subject=${encodeURIComponent('Aanvraag buitenverblijf')}`
+</script>
+
 <template>
-  <section class="container-site pb-20 sm:pb-28">
+  <section id="contact" class="container-site scroll-mt-16 pb-20 sm:pb-28">
     <div
       class="relative flex flex-col items-start gap-6 overflow-hidden rounded-[4px] bg-spruce-700 px-8 py-10 text-cream-50 sm:px-12 lg:flex-row lg:items-center lg:justify-between"
     >
@@ -18,8 +24,12 @@
           Vertel ons over je tuin en je wensen — we denken vrijblijvend met je mee over de
           mogelijkheden, ook als je nog geen concreet plan hebt.
         </p>
+        <p class="mt-3 text-sm text-cream-100/75">
+          Tip: stuur meteen een paar foto's van de plek in je tuin mee — dat helpt enorm bij een
+          eerste inschatting.
+        </p>
       </div>
-      <RouterLink to="/contact" class="btn-on-dark relative shrink-0">Neem contact op</RouterLink>
+      <a :href="mailto" class="btn-on-dark relative shrink-0">{{ site.contact.email }}</a>
     </div>
   </section>
 </template>

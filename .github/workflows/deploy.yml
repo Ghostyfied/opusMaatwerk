@@ -35,9 +35,8 @@ jobs:
       - run: pnpm typecheck
       - run: pnpm build
         env:
-          # Project-pages URL (ghostyfied.github.io/opusMaatwerk).
-          # Change to "/" when a custom domain is attached (PLAN.md §6).
-          BASE_PATH: /opusMaatwerk/
+          # Site is served at the custom domain root (https://eigenbuiten.nl).
+          BASE_PATH: /
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

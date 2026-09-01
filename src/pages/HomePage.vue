@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useHead } from '@unhead/vue'
 import CtaBanner from '@/components/blocks/CtaBanner.vue'
-import { openLightbox } from '@/composables/lightbox'
 import { services } from '@/data/services'
 import { site } from '@/data/site'
 import { steps } from '@/data/steps'
@@ -15,8 +14,6 @@ import heroJpg from '@/assets/photos/garden-room-960.jpg'
 import bouwWebp from '@/assets/photos/constructie-800.webp'
 import bouwWebp2x from '@/assets/photos/constructie-1400.webp'
 import bouwJpg from '@/assets/photos/constructie-800.jpg'
-import bouwLargeWebp from '@/assets/photos/constructie-1400.webp'
-import bouwLargeJpg from '@/assets/photos/constructie-1400.jpg'
 
 useHead({
   title: 'Eigen Buiten — Buitenverblijven op maat · Culemborg',
@@ -34,7 +31,7 @@ useHead({
   <div>
     <!-- 1 · Hero -->
     <section
-      class="relative isolate flex min-h-[min(85svh,860px)] items-end overflow-hidden bg-spruce-900"
+      class="relative isolate overflow-hidden bg-spruce-900 sm:flex sm:min-h-[min(85svh,860px)] sm:items-end"
     >
       <picture>
         <source
@@ -47,12 +44,12 @@ useHead({
           width="1438"
           height="1078"
           alt="Houten tuinkamer met glazen schuifwanden en pannendak, met de twee makers van Eigen Buiten op de voorgrond"
-          class="absolute inset-0 -z-20 h-full w-full object-cover"
+          class="aspect-[4/3] w-full object-cover sm:absolute sm:inset-0 sm:-z-20 sm:aspect-auto sm:h-full"
           fetchpriority="high"
         />
       </picture>
       <div
-        class="absolute inset-0 -z-10"
+        class="absolute inset-0 -z-10 hidden sm:block"
         aria-hidden="true"
         style="
           background-image: linear-gradient(
@@ -63,7 +60,7 @@ useHead({
           );
         "
       />
-      <div class="container-site pt-44 pb-14 sm:pb-20">
+      <div class="container-site pt-10 pb-12 sm:pt-44 sm:pb-20">
         <h1
           class="max-w-3xl font-display text-4xl font-bold tracking-tight text-balance text-white sm:text-5xl lg:text-6xl"
         >
@@ -74,7 +71,9 @@ useHead({
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
           <RouterLink to="/galerij" class="btn-on-dark">Bekijk ons werk</RouterLink>
-          <RouterLink to="/contact" class="btn-ghost-on-dark">Vraag vrijblijvend advies</RouterLink>
+          <RouterLink to="/#contact" class="btn-ghost-on-dark"
+            >Vraag vrijblijvend advies</RouterLink
+          >
         </div>
       </div>
     </section>
@@ -87,14 +86,14 @@ useHead({
         >
           Een buitenverblijf is geen bouwpakket
         </h2>
-        <p class="mt-5 text-lg leading-relaxed">
-          Wij ontwerpen en bouwen houten buitenverblijven die kloppen — bij je tuin, je huis en je
-          budget. Geen standaardmaten uit een catalogus, maar robuust vakwerk in douglas, lariks of
-          eiken: samen bedacht, degelijk gebouwd en tot in de details afgewerkt.
+        <p class="mt-5 leading-relaxed">
+          Wij ontwerpen en bouwen houten buitenverblijven die kloppen — bij je tuin, bij jou en je
+          budget. Geen standaardontwerpen uit een catalogus, maar uniek vakwerk in douglas, lariks
+          of eiken: samen met jou bedacht, degelijk gebouwd en tot in de details afgewerkt.
         </p>
         <p class="mt-4 leading-relaxed">
-          Grote tuinkamer of lastige hoek, strak plan of nog geen idee: we denken met je mee en
-          komen met opties waar je zelf misschien nog niet aan had gedacht.
+          Heb je al een strak plan of nog geen idee? We denken met je mee en komen met opties waar
+          je zelf misschien nog niet aan had gedacht.
         </p>
       </div>
     </section>
@@ -113,18 +112,10 @@ useHead({
             :key="service.title"
             class="overflow-hidden rounded-[4px] border border-line-200 bg-card"
           >
-            <button
-              type="button"
-              class="block w-full cursor-zoom-in focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-oak-400"
-              :aria-label="`Vergroot foto: ${service.image.alt}`"
-              @click="
-                openLightbox({
-                  webp: service.image.largeWebp,
-                  jpg: service.image.largeJpg,
-                  alt: service.image.alt,
-                  caption: service.title,
-                })
-              "
+            <RouterLink
+              to="/galerij"
+              class="block w-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-oak-400"
+              :aria-label="`Naar de galerij — ${service.title}`"
             >
               <picture>
                 <source
@@ -141,7 +132,7 @@ useHead({
                   class="aspect-[4/3] w-full object-cover transition-transform duration-300 hover:scale-[1.03]"
                 />
               </picture>
-            </button>
+            </RouterLink>
             <div class="p-6">
               <h3 class="font-semibold text-ink-900">{{ service.title }}</h3>
               <p class="mt-2 text-sm leading-relaxed">{{ service.description }}</p>
@@ -175,23 +166,11 @@ useHead({
           <p class="mt-1.5 text-sm leading-relaxed">{{ step.description }}</p>
         </li>
       </ol>
-      <p class="mt-8 max-w-2xl text-sm">
-        Heldere afspraken: de inschatting is altijd gratis, en desgewenst werken we met een vaste
-        totaalprijs voor het hele project.
-      </p>
       <figure class="mt-12">
-        <button
-          type="button"
-          class="block w-full cursor-zoom-in focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-oak-400"
-          aria-label="Vergroot foto van de constructie in aanbouw"
-          @click="
-            openLightbox({
-              webp: bouwLargeWebp,
-              jpg: bouwLargeJpg,
-              alt: 'Constructie in douglas hout van een buitenverblijf in aanbouw, met asymmetrische kap en schoren',
-              caption: 'In aanbouw: douglas constructie met asymmetrische kap',
-            })
-          "
+        <RouterLink
+          to="/galerij"
+          class="block w-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-oak-400"
+          aria-label="Naar de galerij"
         >
           <picture>
             <source
@@ -208,11 +187,7 @@ useHead({
               class="aspect-[21/9] w-full rounded-[4px] object-cover object-[center_62%]"
             />
           </picture>
-        </button>
-        <figcaption class="mt-3 text-sm text-ink-600/70">
-          In aanbouw: douglas constructie met asymmetrische kap — het balkenwerk dat straks het
-          karakter van het buitenverblijf bepaalt.
-        </figcaption>
+        </RouterLink>
       </figure>
     </section>
 
@@ -254,15 +229,23 @@ useHead({
       >
         Wat opdrachtgevers zeggen
       </h2>
-      <div class="mt-10 grid gap-5 lg:grid-cols-3">
+      <div class="mt-10 grid gap-5 sm:grid-cols-2">
         <figure
           v-for="t in testimonials"
           :key="t.author"
           class="flex flex-col justify-between rounded-[4px] border border-line-200 bg-card p-7"
         >
-          <blockquote class="font-serif text-[17px] leading-relaxed text-ink-900 italic">
-            “{{ t.quote }}”
-          </blockquote>
+          <div>
+            <p
+              v-if="t.title"
+              class="mb-2 font-display text-xs font-bold tracking-[0.15em] text-oak-600 uppercase"
+            >
+              {{ t.title }}
+            </p>
+            <blockquote class="font-serif text-[17px] leading-relaxed text-ink-900 italic">
+              “{{ t.quote }}”
+            </blockquote>
+          </div>
           <figcaption class="mt-5 text-sm">
             <span class="font-semibold text-ink-900">{{ t.author }}</span>
             <span class="text-ink-600/70"> · {{ t.location }}</span>
@@ -279,15 +262,32 @@ useHead({
         >
           Twee makers, één ambacht
         </h2>
-        <p class="mt-5 text-lg leading-relaxed">
+        <p class="mt-5 leading-relaxed">
           {{ site.brand.name }} is het werk van twee vakmannen met een gedeelde overtuiging: buiten
           leven wordt beter met goed hout, een slim ontwerp en aandacht voor detail.
         </p>
         <p class="mt-4 leading-relaxed">
-          De een stond jarenlang als musicus op het podium en ontdekte tijdens de coronajaren dat
-          die precisie ook in hout kan wonen. Samen ontwerpen en bouwen we ieder buitenverblijf van
-          de eerste schets tot de oplevering — vakwerk waar we onze naam aan verbinden.
+          Tijmen Wehlburg stond jarenlang als musicus op het podium en ontdekte tijdens de
+          coronajaren dat creativiteit en precisie ook in ambachtelijk werk kunnen wonen. Jos
+          Bodewes werkte jarenlang als technisch-commercieel specialist voor verschillende
+          ondernemingen, maar vond zijn passie in hout.
         </p>
+        <p class="mt-4 leading-relaxed">
+          Samen begonnen ze {{ site.brand.name }} — vakwerk waar ze hun naam aan verbinden.
+        </p>
+        <ul class="mt-6 space-y-1 text-sm text-ink-900">
+          <li>
+            Tijmen Wehlburg,
+            <a
+              href="https://www.opusmaatwerk.nl"
+              target="_blank"
+              rel="noopener"
+              class="font-medium text-spruce-700 underline decoration-oak-400/50 underline-offset-2 hover:text-spruce-900"
+              >www.opusmaatwerk.nl</a
+            >
+          </li>
+          <li>Jos Bodewes</li>
+        </ul>
         <p class="mt-6 font-display text-sm font-semibold tracking-wide text-spruce-700">
           — de makers van {{ site.brand.name }}
         </p>

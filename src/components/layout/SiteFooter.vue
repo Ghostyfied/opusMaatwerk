@@ -9,7 +9,7 @@ const year = new Date().getFullYear()
   <footer class="bg-spruce-900 text-cream-100/80">
     <div class="container-site grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-3">
       <div class="max-w-xs">
-        <BrandMark on-dark />
+        <BrandMark variant="full" />
         <p class="mt-4 text-sm leading-relaxed">
           Buitenverblijven op maat — ontworpen en gebouwd door twee vakmannen uit
           {{ site.location }}.
@@ -26,7 +26,7 @@ const year = new Date().getFullYear()
           <li><RouterLink class="hover:text-cream-50" to="/galerij">Galerij</RouterLink></li>
           <li><RouterLink class="hover:text-cream-50" to="/#ervaringen">Ervaringen</RouterLink></li>
           <li>
-            <RouterLink class="hover:text-cream-50" to="/contact">Contact & offerte</RouterLink>
+            <RouterLink class="hover:text-cream-50" to="/#contact">Contact</RouterLink>
           </li>
         </ul>
       </nav>
@@ -47,7 +47,6 @@ const year = new Date().getFullYear()
             </a>
           </li>
           <li v-else class="text-cream-100/50">Telefoonnummer volgt</li>
-          <li>Werkgebied: {{ site.serviceArea }}</li>
         </ul>
       </div>
     </div>

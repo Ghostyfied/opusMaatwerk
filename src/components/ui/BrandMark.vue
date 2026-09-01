@@ -1,34 +1,28 @@
 <script setup lang="ts">
+import icon from '@/assets/brand/icon-192.png'
+import fullLogo from '@/assets/brand/logo-full-360.jpg'
+
 withDefaults(
   defineProps<{
-    /** Rendered on a dark (spruce) background or a light (cream) one. */
-    onDark?: boolean
+    /**
+     * 'icon' = the round EB monogram (navbar, favicon);
+     * 'full' = the square logo with roof mark and wordmark (footer).
+     * Sources: assets/brand/{icon,logo}-original.jpg.
+     */
+    variant?: 'icon' | 'full'
   }>(),
-  { onDark: false },
+  { variant: 'icon' },
 )
 </script>
 
 <template>
-  <!--
-    Eigen Buiten lockup: the badge is an SVG recreation of the delivered
-    logo (roof mark on the ochre square — source: assets/brand/
-    logo-original.jpg); the wordmark is set in Quicksand to match the
-    logo's rounded letterforms, in a contrast-safe color per background.
-  -->
-  <span class="inline-flex items-center gap-2.5">
-    <svg viewBox="0 0 100 100" aria-hidden="true" class="h-9 w-9 shrink-0">
-      <rect width="100" height="100" rx="14" fill="#C18F50" />
-      <path
-        d="M50 0 L90 35 L100 64 L92 61.5 L50 28 L8 61.5 L0 64 L10 35 Z"
-        fill="#E7DAB7"
-        transform="translate(18 29.5) scale(0.64)"
-      />
-    </svg>
-    <span
-      class="font-logo text-[17px] leading-none font-semibold tracking-[0.01em]"
-      :class="onDark ? 'text-cream-50' : 'text-ink-900'"
-    >
-      Eigen Buiten
-    </span>
-  </span>
+  <img
+    v-if="variant === 'icon'"
+    :src="icon"
+    alt="Eigen Buiten"
+    width="192"
+    height="192"
+    class="h-11 w-11"
+  />
+  <img v-else :src="fullLogo" alt="Eigen Buiten" width="360" height="360" class="h-auto w-36" />
 </template>
