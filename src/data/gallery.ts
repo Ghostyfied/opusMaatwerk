@@ -33,6 +33,31 @@ import keukenVeranda960w from '@/assets/photos/buitenkeuken-veranda-960.webp'
 import keukenVeranda640j from '@/assets/photos/buitenkeuken-veranda-640.jpg'
 import keukenVeranda1600w from '@/assets/photos/buitenkeuken-veranda-1600.webp'
 import keukenVeranda1600j from '@/assets/photos/buitenkeuken-veranda-1600.jpg'
+import terras640w from '@/assets/photos/terras-lariks-640.webp'
+import terras960w from '@/assets/photos/terras-lariks-960.webp'
+import terras640j from '@/assets/photos/terras-lariks-640.jpg'
+import terras1600w from '@/assets/photos/terras-lariks-1600.webp'
+import terras1600j from '@/assets/photos/terras-lariks-1600.jpg'
+import lounge640w from '@/assets/photos/overkapping-lounge-640.webp'
+import lounge960w from '@/assets/photos/overkapping-lounge-960.webp'
+import lounge640j from '@/assets/photos/overkapping-lounge-640.jpg'
+import lounge1600w from '@/assets/photos/overkapping-lounge-1600.webp'
+import lounge1600j from '@/assets/photos/overkapping-lounge-1600.jpg'
+import vergrijsd640w from '@/assets/photos/tuinhuis-vergrijsd-640.webp'
+import vergrijsd960w from '@/assets/photos/tuinhuis-vergrijsd-960.webp'
+import vergrijsd640j from '@/assets/photos/tuinhuis-vergrijsd-640.jpg'
+import vergrijsd1600w from '@/assets/photos/tuinhuis-vergrijsd-1600.webp'
+import vergrijsd1600j from '@/assets/photos/tuinhuis-vergrijsd-1600.jpg'
+import doorgang640w from '@/assets/photos/berging-doorgang-640.webp'
+import doorgang960w from '@/assets/photos/berging-doorgang-960.webp'
+import doorgang640j from '@/assets/photos/berging-doorgang-640.jpg'
+import doorgang1600w from '@/assets/photos/berging-doorgang-1600.webp'
+import doorgang1600j from '@/assets/photos/berging-doorgang-1600.jpg'
+import schutting640w from '@/assets/photos/schutting-zwembad-640.webp'
+import schutting960w from '@/assets/photos/schutting-zwembad-960.webp'
+import schutting640j from '@/assets/photos/schutting-zwembad-640.jpg'
+import schutting1600w from '@/assets/photos/schutting-zwembad-1600.webp'
+import schutting1600j from '@/assets/photos/schutting-zwembad-1600.jpg'
 import constructie800w from '@/assets/photos/constructie-800.webp'
 import constructie800j from '@/assets/photos/constructie-800.jpg'
 import constructie1400w from '@/assets/photos/constructie-1400.webp'
@@ -87,6 +112,17 @@ export const galleryPhotos: GalleryPhoto[] = [
     alt: 'Vrijstaande houten overkapping met lichtdoorlatend dak en aangebouwde berging',
   },
   {
+    id: 'overkapping-lounge',
+    thumbWebp: lounge640w,
+    thumbWebp2x: lounge960w,
+    thumbJpg: lounge640j,
+    largeWebp: lounge1600w,
+    largeJpg: lounge1600j,
+    width: 1600,
+    height: 1200,
+    alt: 'Houten overkapping met pannendak boven een loungehoek in de tuin',
+  },
+  {
     id: 'tuinhuis-atelier',
     thumbWebp: atelier640w,
     thumbWebp2x: atelier960w,
@@ -96,6 +132,28 @@ export const galleryPhotos: GalleryPhoto[] = [
     width: 1600,
     height: 1200,
     alt: 'Modern atelier met verticale gevelbekleding van lariks en daklichten',
+  },
+  {
+    id: 'tuinhuis-vergrijsd',
+    thumbWebp: vergrijsd640w,
+    thumbWebp2x: vergrijsd960w,
+    thumbJpg: vergrijsd640j,
+    largeWebp: vergrijsd1600w,
+    largeJpg: vergrijsd1600j,
+    width: 1600,
+    height: 1077,
+    alt: 'Tuinhuis met plat dak, vergrijsde gevelbekleding en dubbele deuren met glas',
+  },
+  {
+    id: 'terras-lariks',
+    thumbWebp: terras640w,
+    thumbWebp2x: terras960w,
+    thumbJpg: terras640j,
+    largeWebp: terras1600w,
+    largeJpg: terras1600j,
+    width: 1600,
+    height: 1038,
+    alt: 'Beschutte terrashoek tegen de gevel met wanden en verhoogde vlonder van lariks',
   },
   {
     id: 'buitenkeuken-hoek',
@@ -129,6 +187,28 @@ export const galleryPhotos: GalleryPhoto[] = [
     width: 1600,
     height: 1200,
     alt: 'Maatwerk buitenkeuken met kamado-barbecue onder een houten veranda met windscherm',
+  },
+  {
+    id: 'schutting-zwembad',
+    thumbWebp: schutting640w,
+    thumbWebp2x: schutting960w,
+    thumbJpg: schutting640j,
+    largeWebp: schutting1600w,
+    largeJpg: schutting1600j,
+    width: 1600,
+    height: 1200,
+    alt: 'Strak houten schuttingwerk rondom een zwembad',
+  },
+  {
+    id: 'berging-doorgang',
+    thumbWebp: doorgang640w,
+    thumbWebp2x: doorgang960w,
+    thumbJpg: doorgang640j,
+    largeWebp: doorgang1600w,
+    largeJpg: doorgang1600j,
+    width: 1536,
+    height: 2048,
+    alt: 'Doorgang met overstek tussen berging en schutting, bekleed met lariks',
   },
   {
     id: 'constructie',
