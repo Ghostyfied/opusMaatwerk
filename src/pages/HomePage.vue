@@ -95,7 +95,7 @@ useHead({
           of eiken: samen met jou bedacht, degelijk gebouwd en tot in de details afgewerkt.
         </p>
         <p class="mt-4 leading-relaxed">
-          Heb je al een strak plan of nog geen idee: we denken met je mee en komen met opties waar
+          Heb je al een strak plan of nog geen idee? We denken met je mee en komen met opties waar
           je zelf misschien nog niet aan had gedacht.
         </p>
       </div>
@@ -177,10 +177,6 @@ useHead({
           <p class="mt-1.5 text-sm leading-relaxed">{{ step.description }}</p>
         </li>
       </ol>
-      <p class="mt-8 max-w-2xl text-sm">
-        Heldere afspraken: de inschatting is altijd gratis, en desgewenst werken we met een vaste
-        totaalprijs voor het hele project.
-      </p>
       <figure class="mt-12">
         <button
           type="button"
@@ -281,10 +277,27 @@ useHead({
           leven wordt beter met goed hout, een slim ontwerp en aandacht voor detail.
         </p>
         <p class="mt-4 leading-relaxed">
-          De een stond jarenlang als musicus op het podium en ontdekte tijdens de coronajaren dat
-          die precisie ook in hout kan wonen. Samen ontwerpen en bouwen we ieder buitenverblijf van
-          de eerste schets tot de oplevering — vakwerk waar we onze naam aan verbinden.
+          Tijmen Wehlburg stond jarenlang als musicus op het podium en ontdekte tijdens de
+          coronajaren dat creativiteit en precisie ook in ambachtelijk werk kunnen wonen. Jos
+          Bodewes werkte jarenlang als technisch-commercieel specialist voor verschillende
+          ondernemingen, maar vond zijn passie in hout.
         </p>
+        <p class="mt-4 leading-relaxed">
+          Samen begonnen ze {{ site.brand.name }} — vakwerk waar ze hun naam aan verbinden.
+        </p>
+        <ul class="mt-6 space-y-1 text-sm text-ink-900">
+          <li>
+            Tijmen Wehlburg,
+            <a
+              href="https://www.opusmaatwerk.nl"
+              target="_blank"
+              rel="noopener"
+              class="font-medium text-spruce-700 underline decoration-oak-400/50 underline-offset-2 hover:text-spruce-900"
+              >www.opusmaatwerk.nl</a
+            >
+          </li>
+          <li>Jos Bodewes</li>
+        </ul>
         <p class="mt-6 font-display text-sm font-semibold tracking-wide text-spruce-700">
           — de makers van {{ site.brand.name }}
         </p>
