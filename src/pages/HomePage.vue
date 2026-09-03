@@ -265,8 +265,8 @@ usePageSeo({
         <p class="mt-4 leading-relaxed">
           Tijmen Wehlburg stond jarenlang als musicus op het podium en ontdekte tijdens de
           coronajaren dat creativiteit en precisie ook in ambachtelijk werk kunnen wonen. Jos
-          Bodewes werkte jarenlang als technisch-commercieel specialist voor verschillende
-          ondernemingen, maar vond zijn passie in hout.
+          Bodewes werkte tot 2020 als technisch adviseur voor diverse bedrijven, maar volgde
+          sindsdien zijn voorliefde voor timmerwerk.
         </p>
         <p class="mt-4 leading-relaxed">
           Samen begonnen ze {{ site.brand.name }} — vakwerk waar ze hun naam aan verbinden.

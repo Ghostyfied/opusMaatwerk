@@ -7,7 +7,7 @@ export interface Testimonial {
 }
 
 /**
- * The first entry is a review for Eigen Buiten; the others are
+ * The first two entries are reviews for Eigen Buiten; the others are
  * ervaringen uit eerder werk van Tijmen als zelfstandig timmerman.
  */
 export const testimonials: Testimonial[] = [
@@ -17,6 +17,12 @@ export const testimonials: Testimonial[] = [
       'Tijmen en Jos bouwden in mijn tuin een prachtig tuinhuis van Douglas-hout. Het huis met een schuur- en een loungegedeelte was hun ontwerp. Materiaal en uitvoering hebben zij steeds nauwkeurig met me afgestemd. Het is prachtig geworden met glazen schuifpui! En het was in een mum van tijd klaar. Ik kan hen van harte aanbevelen als zeer goede vakmannen met oog voor materialen, het hergebruik ervan en voor mooie ontwerpdetails. Helemaal top!',
     author: 'Dieuwke van Ooij',
     location: 'Utrecht',
+  },
+  {
+    quote:
+      'Jos en Tijmen hebben bij ons een prachtige overkapping gemaakt, waar we enorm van genieten. Ze dachten actief mee en gaven goede adviezen. Wij ervaarden hen als heel prettig, transparant en eerlijk.',
+    author: 'Chester en Anoesjka',
+    location: 'Everdingen',
   },
   {
     quote:
