@@ -7,7 +7,7 @@ export interface Testimonial {
 }
 
 /**
- * The first two entries are reviews for Eigen Buiten; the others are
+ * The first three entries are reviews for Eigen Buiten; the others are
  * ervaringen uit eerder werk van Tijmen als zelfstandig timmerman.
  */
 export const testimonials: Testimonial[] = [
@@ -26,15 +26,15 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      'Tijmen heeft een goed bouwkundig inzicht, vindt het fijn als je meedenkt en kiest uit alternatieven. Voor ons is ook erg belangrijk dat hij zijn afspraken nakomt — haast een unicum in de (ver)bouwwereld.',
-    author: 'Jan van Dongen',
-    location: 'Culemborg',
+      'Over de vervanging van mijn schuur en schutting ben ik heel tevreden. Tijmen en collega Jos zijn prettige mensen. Werken netjes en houden zich aan afspraken. Ook over de levering van materialen werd goed gecommuniceerd. Prima bedrijf.',
+    author: 'C. Rosenbaum',
+    location: 'Utrecht',
   },
   {
     quote:
-      'Wij zijn heel tevreden over de wijze waarop Tijmen meedenkt, duurzaam werkt, niet schroomt materialen te hergebruiken en zijn afspraken nakomt. Chapeaux!',
-    author: 'M. Albers',
-    location: 'Asperen',
+      'Tijmen heeft een goed bouwkundig inzicht, vindt het fijn als je meedenkt en kiest uit alternatieven. Voor ons is ook erg belangrijk dat hij zijn afspraken nakomt — haast een unicum in de (ver)bouwwereld.',
+    author: 'Jan van Dongen',
+    location: 'Culemborg',
   },
   {
     quote:
