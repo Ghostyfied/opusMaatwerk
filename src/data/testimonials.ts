@@ -7,8 +7,8 @@ export interface Testimonial {
 }
 
 /**
- * The first three entries are reviews for Eigen Buiten; the others are
- * ervaringen uit eerder werk van Tijmen als zelfstandig timmerman.
+ * The first four entries are reviews for Eigen Buiten; the last is een
+ * ervaring uit eerder werk van Tijmen als zelfstandig timmerman.
  */
 export const testimonials: Testimonial[] = [
   {
@@ -32,14 +32,14 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      'Tijmen heeft een goed bouwkundig inzicht, vindt het fijn als je meedenkt en kiest uit alternatieven. Voor ons is ook erg belangrijk dat hij zijn afspraken nakomt — haast een unicum in de (ver)bouwwereld.',
-    author: 'Jan van Dongen',
+      'Jos en Tijmen hebben bij ons een losstaande overkapping gebouwd naar onze eigen ideeën. Een niet recht toe, recht aan constructie waardoor best ingewikkeld. Hierdoor is een hele mooie buitenkeuken ruimte gecreëerd die volledig past bij de vormen van de tuin. Ze hebben vanaf het begin goed meegedacht hoe de wensen te realiseren en we zijn heel tevreden met het eindresultaat. In een later stadium heeft Jos ook nog een bijpassende buitenkeuken gemaakt van zeer goede kwaliteit.',
+    author: 'Henk Jan',
     location: 'Culemborg',
   },
   {
     quote:
-      'Heel prettig hoe hij meedenkt en verschillende opties kan aanbieden in zijn offerte wat betreft degelijkheid, kosten en hergebruik van materialen. Een creatieve vakman!',
-    author: 'Stadsboerderij Caetshage',
+      'Tijmen heeft een goed bouwkundig inzicht, vindt het fijn als je meedenkt en kiest uit alternatieven. Voor ons is ook erg belangrijk dat hij zijn afspraken nakomt — haast een unicum in de (ver)bouwwereld.',
+    author: 'Jan van Dongen',
     location: 'Culemborg',
   },
 ]
