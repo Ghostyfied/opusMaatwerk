@@ -56,7 +56,7 @@ const year = new Date().getFullYear()
         class="container-site flex flex-col gap-2 py-5 text-xs text-cream-100/50 sm:flex-row sm:items-center sm:justify-between"
       >
         <p>© {{ year }} {{ site.brand.name }} · alle rechten voorbehouden</p>
-        <p v-if="site.legal.kvk">KvK {{ site.legal.kvk }}</p>
+        <p v-if="site.legal.kvk">KvK nr {{ site.legal.kvk }}</p>
         <p v-else>Bedrijfsgegevens (naam, KvK, btw-id) volgen bij inschrijving</p>
       </div>
     </div>

@@ -24,7 +24,7 @@ export const site = {
     whatsapp: null as string | null,
   },
   legal: {
-    kvk: null as string | null,
+    kvk: '51404362' as string | null,
     btw: null as string | null,
   },
   domain: 'https://eigenbuiten.nl' as string | null,
